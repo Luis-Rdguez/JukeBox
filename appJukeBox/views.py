@@ -3,10 +3,6 @@ from django.shortcuts import get_object_or_404, get_list_or_404
 from .models import *
 # Create your views here.
 
-from django.shortcuts import get_object_or_404, get_list_or_404
-from django.shortcuts import render
-from .models import Departamento, Habilidad, Empleado
-
 #devuelve el listado de empresas
 def index_pais(request):
 	pais = get_list_or_404(Pais.objects.order_by('nombre'))
