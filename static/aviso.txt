@@ -1,0 +1,1 @@
+Esta carpeta es solo para evitar el error de localizacion de la carpeta static de la aplicacion.
