@@ -2054,7 +2054,7 @@ h3 {
   height: 0;
   border-top: none;
   border-right: none;
-  border-bottom: noe;
+  border-bottom: none;
   border-left: none;
   top: -8px;
   content: "\f100";
@@ -2093,7 +2093,7 @@ h3 {
   height: 0;
   border-top: none;
   border-right: none;
-  border-bottom: noe;
+  border-bottom: none;
   border-left: none;
   top: -4px;
   content: "\f100";
@@ -2107,7 +2107,7 @@ h3 {
   display: flex;
   width: 0;
   height: 8px;
-  background-color: 0;
+  background-color: white;
   position: relative;
 }
 
@@ -2130,7 +2130,7 @@ h3 {
   height: 0;
   border-top: none;
   border-right: none;
-  border-bottom: noe;
+  border-bottom: none;
   border-left: none;
   top: -8px;
   content: "\f100";
@@ -4699,7 +4699,7 @@ h6 {
 
 /* line 339, ../../Arafath/CL/Cl November/221. Music/HTML/scss/_elements.scss */
 .genric-btn.disable {
-  color: #222222, 0.3;
+  color: #222222;
   background: #f9f9ff;
   border: 1px solid transparent;
   cursor: not-allowed;
