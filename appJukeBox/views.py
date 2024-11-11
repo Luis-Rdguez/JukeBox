@@ -11,6 +11,14 @@ def index(request):
     context = {'bandas_por_pais': bandas_por_pais}
     return render(request, 'index.html', context)
 
+# Página de inicio: Muestra una banda destacada por país
+def show_bandas(request):
+    bandas = []
+    for banda in Banda.objects.all():
+        bandas.append(banda)
+    context = {'bandas': bandas}
+    return render(request, 'track.html', context)
+
 # Listado de todos los países, incluyendo el número de bandas de cada país
 def index_pais(request):
     paises = Pais.objects.all().order_by('pais')
@@ -23,7 +31,7 @@ def index_pais(request):
             for pais in paises
         ]
     }
-    return render(request, 'lista_paises.html', context)
+    return render(request, 'track.html', context)
 
 # Detalle de un país: incluye todas las bandas de ese país y el conteo de bandas
 def show_pais(request, pais_id):
@@ -43,7 +51,7 @@ def show_pais(request, pais_id):
         ],
         'numero_bandas': pais.numero_bandas(),
     }
-    return render(request, 'detalle_pais.html', context)
+    return render(request, 'track.html', context)
 
 # Listado de bandas de un país específico
 def index_bandas(request, pais_id):
@@ -63,7 +71,7 @@ def index_bandas(request, pais_id):
         ],
         'numero_bandas': pais.numero_bandas(),
     }
-    return render(request, 'lista_bandas.html', context)
+    return render(request, 'track.html', context)
 
 # Detalle de una banda, incluyendo país de origen y estilos
 def show_banda(request, banda_id):
@@ -80,7 +88,7 @@ def show_banda(request, banda_id):
         'pais': banda.pais,
         'estilos': banda.estilos.all(),
     }
-    return render(request, 'detalle_banda.html', context)
+    return render(request, 'index.html', context)
 
 # Detalle de un estilo musical: incluye las bandas asociadas y el número total de bandas en ese estilo
 def show_estilo(request, estilo_id):
@@ -100,4 +108,4 @@ def show_estilo(request, estilo_id):
         ],
         'numero_bandas': estilo.numero_bandas(),
     }
-    return render(request, 'detalle_estilo.html', context)
+    return render(request, 'index.html', context)
