@@ -1,40 +1,103 @@
-from django.shortcuts import render
-from django.shortcuts import get_object_or_404, get_list_or_404
-from .models import *
-# Create your views here.
+from django.shortcuts import render, get_object_or_404, get_list_or_404
+from .models import Pais, Banda, Estilo
 
+# Página de inicio: Muestra una banda destacada por país
 def index(request):
-	return render(request, 'index.html')
+    bandas_por_pais = []
+    for pais in Pais.objects.all():
+        banda = Banda.objects.filter(pais=pais).order_by('fechaIni').first()
+        if banda:
+            bandas_por_pais.append(banda)
+    context = {'bandas_por_pais': bandas_por_pais}
+    return render(request, 'index.html', context)
 
-# Devuelve el listado de bandas
+# Listado de todos los países, incluyendo el número de bandas de cada país
 def index_pais(request):
-	pais = get_list_or_404(Pais.objects.order_by('nombre'))
-	context = {'lista_pais': pais }
-	return render(request, 'index.html', context) # TODO cambiar el html
+    paises = Pais.objects.all().order_by('pais')
+    context = {
+        'lista_pais': [
+            {
+                'pais': pais,
+                'numero_bandas': pais.numero_bandas(),
+            }
+            for pais in paises
+        ]
+    }
+    return render(request, 'lista_paises.html', context)
 
-# Devuelve los datos de un pais
+# Detalle de un país: incluye todas las bandas de ese país y el conteo de bandas
 def show_pais(request, pais_id):
-	pais = get_object_or_404(Pais, pk=pais_id)
-	context = {'pais': pais } 
-	return render(request, 'index.html', context) # TODO cambiar el html
+    pais = get_object_or_404(Pais, pk=pais_id)
+    bandas = pais.banda_set.all()
+    context = {
+        'pais': pais,
+        'bandas': [
+            {
+                'nombre': banda.nombre,
+                'descripcion': banda.descripcion,
+                'fechaIni': banda.fechaIni,
+                'fechaFin': banda.fechaFin,
+                'estilos': banda.estilos.all(),
+            }
+            for banda in bandas
+        ],
+        'numero_bandas': pais.numero_bandas(),
+    }
+    return render(request, 'detalle_pais.html', context)
 
-# Devuelve las bandas de un pais
+# Listado de bandas de un país específico
 def index_bandas(request, pais_id):
-	pais = get_object_or_404(Pais, pk=pais_id)
-	bandas =  pais.banda_set.all()
-	context = {'pais': pais, 'bandas' : bandas }
-	return render(request, 'blog.html', context) # TODO cambiar el html
+    pais = get_object_or_404(Pais, pk=pais_id)
+    bandas = pais.banda_set.all()
+    context = {
+        'pais': pais,
+        'bandas': [
+            {
+                'nombre': banda.nombre,
+                'descripcion': banda.descripcion,
+                'fechaIni': banda.fechaIni,
+                'fechaFin': banda.fechaFin,
+                'estilos': banda.estilos.all(),
+            }
+            for banda in bandas
+        ],
+        'numero_bandas': pais.numero_bandas(),
+    }
+    return render(request, 'lista_bandas.html', context)
 
-# Devuelve los detalles de una banda
+# Detalle de una banda, incluyendo país de origen y estilos
 def show_banda(request, banda_id):
-	banda = get_object_or_404(Banda, pk=banda_id)
-	estilos =  banda.estilos.all()
-	context = { 'banda': banda, 'estilos' : estilos }
-	return render(request, 'blog.html', context) # TODO cambiar el html
+    banda = get_object_or_404(Banda, pk=banda_id)
+    context = {
+        'banda': {
+            'nombre': banda.nombre,
+            'descripcion': banda.descripcion,
+            'fechaIni': banda.fechaIni,
+            'fechaFin': banda.fechaFin,
+            'pais': banda.pais,
+            'estilos': banda.estilos.all(),
+        },
+        'pais': banda.pais,
+        'estilos': banda.estilos.all(),
+    }
+    return render(request, 'detalle_banda.html', context)
 
-# Devuelve los detalles de una habilidad
+# Detalle de un estilo musical: incluye las bandas asociadas y el número total de bandas en ese estilo
 def show_estilo(request, estilo_id):
     estilo = get_object_or_404(Estilo, pk=estilo_id)
-    bandas =  estilo.banda_set.all()
-    context = { 'bandas': bandas, 'estilo' : estilo }
-    return render(request, 'blog.html', context) # TODO cambiar el html
+    bandas = estilo.banda_set.all()
+    context = {
+        'estilo': estilo,
+        'bandas': [
+            {
+                'nombre': banda.nombre,
+                'descripcion': banda.descripcion,
+                'fechaIni': banda.fechaIni,
+                'fechaFin': banda.fechaFin,
+                'pais': banda.pais,
+            }
+            for banda in bandas
+        ],
+        'numero_bandas': estilo.numero_bandas(),
+    }
+    return render(request, 'detalle_estilo.html', context)
