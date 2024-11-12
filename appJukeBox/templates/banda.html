@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %} {{ banda.nombre }} - JukeBox{% endblock %}
+
+{% block bradcam_area_breadcam_bg_2 %}
+    <!-- bradcam_area  -->
+    <div class="bradcam_area breadcam_bg_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>{{banda.nombre}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+{% endblock %}
+
+{% block about_area %}
+    <!-- about_area  -->    
+    <div class="about_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-md-6">
+                    <div class="about_thumb">
+                        <img class="img-fluid" src="../static/img/about/about_1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-7 col-md-6">
+                    <div class="about_info">
+                         <!-- Aquí mostramos el nombre de la banda -->
+                    <h3>{{ banda.nombre }}</h3>
+                    <!-- Aquí mostramos la descripción de la banda -->
+                    <p>{{ banda.descripcion }}</p>
+                    
+                    <!-- Atributos adicionales en una lista -->
+                    <ul>
+                        <li><strong>País de origen:</strong> {{ pais.pais }}</li>
+                        <li><strong>Fecha de inicio:</strong> {{ banda.fechaIni }}</li>
+                        {% if banda.fechaFin %}
+                            <li><strong>Fecha de finalización:</strong> {{ banda.fechaFin }}</li>
+                        {% endif %}
+                        <li><strong>Estilos:</strong> 
+                            {% for estilo in estilos %}
+                                {{ estilo.estilo }}{% if not forloop.last %}, {% endif %}
+                            {% endfor %}
+                        </li>
+                    </ul>
+                        <div class="signature">
+                            <img src="../static/img/about/signature.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

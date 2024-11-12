@@ -34,24 +34,18 @@ def index_pais(request):
     return render(request, 'track.html', context)
 
 # Detalle de un país: incluye todas las bandas de ese país y el conteo de bandas
+# En views.py
 def show_pais(request, pais_id):
     pais = get_object_or_404(Pais, pk=pais_id)
     bandas = pais.banda_set.all()
     context = {
         'pais': pais,
-        'bandas': [
-            {
-                'nombre': banda.nombre,
-                'descripcion': banda.descripcion,
-                'fechaIni': banda.fechaIni,
-                'fechaFin': banda.fechaFin,
-                'estilos': banda.estilos.all(),
-            }
-            for banda in bandas
-        ],
-        'numero_bandas': pais.numero_bandas(),
+        'bandas': bandas,  # Se pasa la queryset directamente para asegurar el acceso a 'id'
+        'numero_bandas': bandas.count(),
+
     }
-    return render(request, 'track.html', context)
+    return render(request, 'pais.html', context)
+
 
 # Listado de bandas de un país específico
 def index_bandas(request, pais_id):
@@ -88,7 +82,7 @@ def show_banda(request, banda_id):
         'pais': banda.pais,
         'estilos': banda.estilos.all(),
     }
-    return render(request, 'index.html', context)
+    return render(request, 'banda.html', context)
 
 # Detalle de un estilo musical: incluye las bandas asociadas y el número total de bandas en ese estilo
 def show_estilo(request, estilo_id):

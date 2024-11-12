@@ -1,3 +1,6 @@
 */__pycache__
 *.pyc
 appJukeBox/migrations/*00*.py
+appJukeBox/static/fonts
+appJukeBox/static/img
+appJukeBox/static/js

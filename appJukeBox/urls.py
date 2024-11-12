@@ -8,6 +8,6 @@ urlpatterns = [
     path('bandas/', views.show_bandas, name='todas_bandas'),   # Esto funciona en track y te muestra todas las bandas
     path('paises/<int:pais_id>/', views.show_pais, name='detail'),
     path('paises/<int:pais_id>/bandas', views.index_bandas, name='bandas'),
-    path('bandas/<int:banda_id>', views.show_banda, name='banda'),
+    path('bandas/<int:banda_id>/', views.show_banda, name='banda'),
     path('estilos/<int:estilo_id>', views.show_estilo, name='estilo'),
 ]
