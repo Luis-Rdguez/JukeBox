@@ -103,3 +103,11 @@ def show_estilo(request, estilo_id):
         'numero_bandas': estilo.numero_bandas(),
     }
     return render(request, 'index.html', context)
+
+# Listado de todos los estilos, incluyendo el número de bandas de cada estilo
+def show_estilos(request):
+    estilos = []
+    for estilo in Estilo.objects.all():
+        estilos.append(estilo) 
+    context = {'estilos': estilos }
+    return render(request, 'estilos.html', context)

@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}JukeBox{% endblock %}
+
+{% block music_area %}
+<!-- bradcam_area  -->
+<div class="bradcam_area breadcam_bg_2">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text text-center">
+                    <h3>Mis Estilos</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ bradcam_area  -->
+<!-- music_area  -->
+<div class="music_area music_gallery">
+    <div class="container">
+        {% if estilos %}
+        {% for e in estilos %}
+        <div class="row align-items-center justify-content-center mb-20">
+            <div class="col-xl-10">
+                <div class="row align-items-center">
+                    <div class="col-xl-9 col-md-9">
+                        <div class="music_field">
+                            <div class="thumb">
+                                <img src="../static/img/music_man/1.png" alt="">
+                            </div>
+                            <div class="audio_name">
+                                <div class="name">
+                                    <h4><a href="/appJukeBox/estilos">{{ e.estilo}}</a></h4>
+                                </div>
+                                <audio preload="auto" controls>
+                                    <source src="https://www.w3schools.com/html/horse.mp3">
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-3">
+                        <div class="music_btn">
+                            <a href="#" class="boxed-btn">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="row align-items-center justify-content-center mb-20">
+            <div class="col-xl-10">
+                <div class="row align-items-center">
+                    <div class="col-xl-9 col-md-9">
+                        <div class="music_field">
+                            <div class="audio_name">
+                                <div class="name">
+                                    <h4>No hay estilos creadas.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+<!-- music_area end  -->
+{% endblock %}
