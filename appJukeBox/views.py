@@ -103,3 +103,30 @@ def show_estilos(request):
         estilos.append(estilo) 
     context = {'estilos': estilos }
     return render(request, 'estilos.html', context)
+
+# Listado de todos los estilos, incluyendo el número de bandas de cada estilo
+from django.shortcuts import render
+from .models import Pais, Banda
+
+def show_paises(request):
+    # Obtiene todos los países y el total de bandas
+    paises = Pais.objects.all()
+    total_bandas = Banda.objects.count()
+
+    # Construye una lista de diccionarios con datos calculados por cada país
+    paises_info = []
+    for pais in paises:
+        numero_bandas = pais.numero_bandas()  # Usa el método 'numero_bandas' del modelo
+        # Calcula el porcentaje de bandas en el país con respecto al total
+        porcentaje = (numero_bandas / total_bandas * 100) if total_bandas > 0 else 0
+        paises_info.append({
+            'pais': pais,
+            'numero_bandas': numero_bandas,
+            'porcentaje': porcentaje,
+        })
+
+    # Pasa los datos al contexto
+    context = {
+        'paises_info': paises_info,
+    }
+    return render(request, 'paises.html', context)

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %} Paises - JukeBox{% endblock %}
+
+{% block bradcam_area_breadcam_bg_2 %}
+    <!-- bradcam_area  -->
+    <div class="bradcam_area breadcam_bg_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Lista de Paises</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+{% endblock %}
+{% block whole-wrap %}
+<div class="whole-wrap">
+    <div class="container box_1170">
+        <div class="section-top-border">
+            <h3 class="mb-30">Paises</h3>
+            <div class="progress-table-wrap">
+                <div class="progress-table">
+                    <div class="table-head">
+                        <div class="serial">#</div>
+                        <div class="country">Pais</div>    
+                        <div class="visit">Numero de bandas</div>
+                        <div class="percentage">Porcentaje</div>
+                    </div>
+                    
+                    <!-- Itera sobre cada país en paises_info -->
+                    {% for pais_info in paises_info %}
+                    <div class="table-row">
+                        <div class="serial">{{ forloop.counter }}</div>
+                        <div class="country">
+                            <a href="{% url 'pais' pais_info.pais.id %}">
+                                <img src="../static/img/elements/f{{ forloop.counter }}.jpg" alt="flag">
+                                {{ pais_info.pais.pais }}
+                            </a>
+                        </div>
+                        <div class="visit">{{ pais_info.numero_bandas }}</div>
+                        <div class="percentage">
+                            <div class="progress">
+                                <div class="progress-bar color-{{ forloop.counter }}" role="progressbar" 
+                                     style="width: {{ pais_info.porcentaje }}%"
+                                     aria-valuenow="{{ pais_info.porcentaje }}" 
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
