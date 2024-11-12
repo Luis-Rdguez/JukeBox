@@ -36,14 +36,15 @@
                     
                     <!-- Atributos adicionales en una lista -->
                     <ul>
-                        <li><strong>País de origen:</strong> {{ pais.pais }}</li>
+
+                        <li><strong>País de origen:</strong> <a href="{% url 'pais' pais.id %}">{{ pais.pais }}</a></li>
                         <li><strong>Fecha de inicio:</strong> {{ banda.fechaIni }}</li>
                         {% if banda.fechaFin %}
                             <li><strong>Fecha de finalización:</strong> {{ banda.fechaFin }}</li>
                         {% endif %}
                         <li><strong>Estilos:</strong> 
                             {% for estilo in estilos %}
-                                {{ estilo.estilo }}{% if not forloop.last %}, {% endif %}
+                                <a href="{% url 'estilo' estilo.id %}">{{ estilo.estilo }}</a>{% if not forloop.last %}, {% endif %}
                             {% endfor %}
                         </li>
                     </ul>
