@@ -37,7 +37,7 @@
                             </div>
                             <div class="audio_name">
                                 <div class="name">
-                                    <h4><a href="{% url 'bandas' e.id %}">{{ e.nombre }}</a></h4>
+                                    <h4><a href="{% url 'banda' e.id %}">{{ e.nombre }}</a></h4>
                                     <p>{{ e.fechaIni }}</p>
                                 </div>
                                 <audio preload="auto" controls>
@@ -48,7 +48,7 @@
                     </div>
                     <div class="col-xl-3 col-md-3">
                         <div class="music_btn">
-                            <a href="{% url 'bandas' e.id %}" class="boxed-btn">Más Información</a>
+                            <a href="{% url 'banda' e.id %}" class="boxed-btn">Más Información</a>
                         </div>
                     </div>
                 </div>
