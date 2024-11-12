@@ -39,9 +39,10 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a class="active" href="index.html">Home</a></li>
-                                            <li><a href="track.html">Bandas</a></li>
-                                            <li><a href="elements.html">Paises</a></li>
+                                            <li><a class="active" href="{% url 'index' %}">Home</a></li>
+                                            <li><a href="{% url 'todas_bandas' %}">Bandas</a></li>
+                                            
+                                            <li><a href="{% url 'todos_estilos' %}">Estilos</a></li>  
                                         </ul>
                                     </nav>
                                 </div>

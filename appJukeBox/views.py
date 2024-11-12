@@ -17,7 +17,7 @@ def show_bandas(request):
     for banda in Banda.objects.all():
         bandas.append(banda)
     context = {'bandas': bandas}
-    return render(request, 'track.html', context)
+    return render(request, 'bandas.html', context)
 
 # Listado de todos los países, incluyendo el número de bandas de cada país
 def index_pais(request):
@@ -31,7 +31,7 @@ def index_pais(request):
             for pais in paises
         ]
     }
-    return render(request, 'track.html', context)
+    return render(request, 'bandas.html', context)
 
 # Detalle de un país: incluye todas las bandas de ese país y el conteo de bandas
 # En views.py
@@ -65,7 +65,7 @@ def index_bandas(request, pais_id):
         ],
         'numero_bandas': pais.numero_bandas(),
     }
-    return render(request, 'track.html', context)
+    return render(request, 'bandas.html', context)
 
 # Detalle de una banda, incluyendo país de origen y estilos
 def show_banda(request, banda_id):
