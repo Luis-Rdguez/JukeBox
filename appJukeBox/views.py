@@ -87,22 +87,14 @@ def show_banda(request, banda_id):
 # Detalle de un estilo musical: incluye las bandas asociadas y el número total de bandas en ese estilo
 def show_estilo(request, estilo_id):
     estilo = get_object_or_404(Estilo, pk=estilo_id)
-    bandas = estilo.banda_set.all()
+    bandas = estilo.banda_set.all()  # Obtener todas las bandas que tienen el estilo actual
     context = {
         'estilo': estilo,
-        'bandas': [
-            {
-                'nombre': banda.nombre,
-                'descripcion': banda.descripcion,
-                'fechaIni': banda.fechaIni,
-                'fechaFin': banda.fechaFin,
-                'pais': banda.pais,
-            }
-            for banda in bandas
-        ],
-        'numero_bandas': estilo.numero_bandas(),
+        'bandas': bandas,  # Pasar las bandas directamente en el contexto
+        'descripcion' : estilo.descripcion,
+        'numero_bandas': bandas.count(),  # Contar el número de bandas en este estilo
     }
-    return render(request, 'index.html', context)
+    return render(request, 'estilo.html', context)
 
 # Listado de todos los estilos, incluyendo el número de bandas de cada estilo
 def show_estilos(request):

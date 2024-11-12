@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}JukeBox{% endblock %}
+{% block title %}{{estilo.estilo}} - JukeBox{% endblock %}
 
 {% block music_area %}
 <!-- bradcam_area  -->
@@ -9,18 +9,25 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="bradcam_text text-center">
-                    <h3>Mis Estilos</h3>
+                    <h3>{{ estilo.estilo }}</h3>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!--/ bradcam_area  -->
+
 <!-- music_area  -->
 <div class="music_area music_gallery">
     <div class="container">
-        {% if estilos %}
-        {% for e in estilos %}
+        <div class="row">
+            <div class="col-xl-12 text-center mb-1">
+                <p>{{estilo.descripcion}}</p>
+                <p>Hay {{numero_bandas}} banda(s) de {{ estilo.estilo }}{% if numero_bandas != 1 %}s{% endif %}</p>
+            </div>
+        </div>
+        {% if bandas %}
+        {% for e in bandas %}
         <div class="row align-items-center justify-content-center mb-20">
             <div class="col-xl-10">
                 <div class="row align-items-center">
@@ -31,7 +38,8 @@
                             </div>
                             <div class="audio_name">
                                 <div class="name">
-                                    <h4><a href="/appJukeBox/estilos">{{ e.estilo}}</a></h4>
+                                    <h4><a href="{% url 'bandas' e.id %}">{{ e.nombre }}</a></h4>
+                                    <p>{{ e.fechaIni }}</p>
                                 </div>
                                 <audio preload="auto" controls>
                                     <source src="https://www.w3schools.com/html/horse.mp3">
@@ -41,7 +49,7 @@
                     </div>
                     <div class="col-xl-3 col-md-3">
                         <div class="music_btn">
-                            <a href="{% url 'estilo' e.id %}" class="boxed-btn">Más Información</a>
+                            <a href="{% url 'banda' e.id %}" class="boxed-btn">Más Información</a>
                         </div>
                     </div>
                 </div>
@@ -56,7 +64,7 @@
                         <div class="music_field">
                             <div class="audio_name">
                                 <div class="name">
-                                    <h4>No hay estilos creadas.</h4>
+                                    <h4>No hay bandas creadas para este estilo.</h4>
                                 </div>
                             </div>
                         </div>
