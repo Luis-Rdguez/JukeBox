@@ -1,0 +1,17 @@
+/* Contenedor de la imagen */
+.thumb {
+    width: 100px;         /* Ajusta el tamaño según tus necesidades */
+    height: 100px;        /* El mismo alto y ancho para un contenedor cuadrado */
+    overflow: hidden;     /* Oculta cualquier parte de la imagen que sobresalga */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen dentro del contenedor */
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* Cubre todo el contenedor manteniendo la proporción de la imagen */
+    object-position: center;  /* Centra la imagen dentro del contenedor */
+}

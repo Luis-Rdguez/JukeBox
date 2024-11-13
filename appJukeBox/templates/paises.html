@@ -37,7 +37,7 @@
                         <div class="serial">{{ forloop.counter }}</div>
                         <div class="country">
                             <a href="{% url 'pais' pais_info.pais.id %}">
-                                <img src="../static/img/elements/f{{ forloop.counter }}.jpg" alt="flag">
+                                <img src="{{ pais_info.pais.bandera }}" alt="flag">
                                 {{ pais_info.pais.pais }}
                             </a>
                         </div>
