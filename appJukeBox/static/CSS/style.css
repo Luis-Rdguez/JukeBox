@@ -1398,6 +1398,14 @@ h3 {
 .about_area .about_thumb {
   margin-bottom: 30px;
 }
+/* line 12, ../../Arafath/CL/Cl November/221. Music/HTML/scss/_about.scss */
+.about_area .about_thumb .img-fluid img{
+    width: 100%;          /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto;         /* Mantiene la relación de aspecto */
+    object-fit: cover;    /* Llena el contenedor si quieres un recorte proporcional */
+    border-radius: 4px;   /* Añade bordes redondeados, opcional */
+  
+}
 
 /* line 15, ../../Arafath/CL/Cl November/221. Music/HTML/scss/_about.scss */
 .about_area .about_info {
@@ -1956,8 +1964,16 @@ h3 {
   overflow: hidden;
   float: left;
   margin-right: 50px;
+  width: 200px;
+  height: 200px;
 }
 
+/* Selecciona la imagen dentro del contenedor .thumb */
+.music_area .music_field .thumb img {
+  width: 100%;        /* Asegura que la imagen llene el ancho del contenedor */
+  height: 100%;       /* Asegura que la imagen llene la altura del contenedor */
+  object-fit: cover;  /* Ajusta la imagen para cubrir el contenedor manteniendo proporciones */
+}
 /* line 160, ../../Arafath/CL/Cl November/221. Music/HTML/scss/_music_area.scss */
 .music_area .music_field .audio_name {
   overflow: hidden;

@@ -22,8 +22,8 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12 text-center mb-1">
-                <p>{{estilo.descripcion}}</p>
                 <p>Hay {{numero_bandas}} banda(s) de {{ estilo.estilo }}{% if numero_bandas != 1 %}s{% endif %}</p>
+                <p> {{estilo.descripcion}} </p>
             </div>
         </div>
         {% if bandas %}
@@ -34,7 +34,7 @@
                     <div class="col-xl-9 col-md-9">
                         <div class="music_field">
                             <div class="thumb">
-                                <img src="../static/img/music_man/1.png" alt="">
+                                <img src="{{ e.foto }}" alt=" {{e.nombre}}">
                             </div>
                             <div class="audio_name">
                                 <div class="name">
