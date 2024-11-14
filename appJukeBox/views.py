@@ -40,6 +40,7 @@ def show_pais(request, pais_id):
     bandas = pais.banda_set.all()
     context = {
         'pais': pais,
+        'bandera': pais.bandera, 
         'bandas': bandas,  # Se pasa la queryset directamente para asegurar el acceso a 'id'
         'numero_bandas': bandas.count(),
 
@@ -72,6 +73,7 @@ def show_banda(request, banda_id):
     banda = get_object_or_404(Banda, pk=banda_id)
     context = {
         'banda': {
+            'foto': banda.foto,
             'nombre': banda.nombre,
             'descripcion': banda.descripcion,
             'fechaIni': banda.fechaIni,

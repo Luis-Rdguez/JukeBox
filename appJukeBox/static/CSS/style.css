@@ -1399,13 +1399,21 @@ h3 {
   margin-bottom: 30px;
 }
 /* line 12, ../../Arafath/CL/Cl November/221. Music/HTML/scss/_about.scss */
-.about_area .about_thumb .img-fluid img{
-    width: 100%;          /* Hace que la imagen ocupe todo el ancho del contenedor */
-    height: auto;         /* Mantiene la relación de aspecto */
+.about_area .about_thumb .img-fluid {
+    width: 450px;          /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: 450px;         /* Mantiene la relación de aspecto */
     object-fit: cover;    /* Llena el contenedor si quieres un recorte proporcional */
     border-radius: 4px;   /* Añade bordes redondeados, opcional */
   
 }
+
+.bandera-h3 {
+  width: 70px;
+  height: 50px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
 
 /* line 15, ../../Arafath/CL/Cl November/221. Music/HTML/scss/_about.scss */
 .about_area .about_info {
