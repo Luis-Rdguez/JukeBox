@@ -3206,13 +3206,24 @@ h3 {
 }
 
 /* line 39, ../../Arafath/CL/Cl November/221. Music/HTML/scss/_bradcam.scss */
-.bradcam_area h3 {
+.bradcam_area h3{
   font-size: 60px;
   color: #fff;
   font-weight: 400;
   margin-bottom: 0;
   text-transform: uppercase;
 }
+
+.bradcam_area h4{
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 10px;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 
 @media (max-width: 767px) {
   /* line 39, ../../Arafath/CL/Cl November/221. Music/HTML/scss/_bradcam.scss */
@@ -4797,7 +4808,7 @@ h6 {
 /* line 399, ../../Arafath/CL/Cl November/221. Music/HTML/scss/_elements.scss */
 .progress-table .table-row .country img {
   margin-right: 15px;
-  width: 50px;
+  width: 60px;
   height: 50px;
 }
 

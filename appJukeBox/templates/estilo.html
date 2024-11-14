@@ -10,6 +10,8 @@
             <div class="col-xl-12">
                 <div class="bradcam_text text-center">
                     <h3>{{ estilo.estilo }}</h3>
+                    <h4> {{estilo.descripcion}} </h4>
+
                 </div>
             </div>
         </div>
@@ -22,8 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12 text-center mb-1">
-                <p>Hay {{numero_bandas}} banda(s) de {{ estilo.estilo }}{% if numero_bandas != 1 %}s{% endif %}</p>
-                <p> {{estilo.descripcion}} </p>
+                <p>Hay {{numero_bandas}} banda(s) de {{ estilo.estilo }}{% if numero_bandas != 1 %}{% endif %}</p>
             </div>
         </div>
         {% if bandas %}
