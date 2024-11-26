@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404, get_list_or_404
-from .models import Pais, Banda, Estilo
+from django.shortcuts import render, get_object_or_404, get_list_or_404, redirect
+from .models import *
+from .forms import *
 
 # Página de inicio: Muestra una banda destacada por país
 def index(request):
@@ -132,3 +133,23 @@ def show_paises(request):
         'paises_info': paises_info,
     }
     return render(request, 'paises.html', context)
+
+
+
+def add_banda(request):
+    # Si la solicitud es POST, procesamos el formulario
+    if request.method == 'POST':
+        form = BandaForm(request.POST, request.FILES)  # request.FILES es necesario para manejar archivos (como la foto)
+        
+        if form.is_valid():
+            # Si el formulario es válido, lo guardamos en la base de datos
+            banda = form.save(commit=False)  # Preparamos la banda pero aún no la guardamos completamente
+            banda.save()  # Guardamos la banda en la base de datos
+            
+            # Redirigimos a alguna página después de guardar, por ejemplo, al listado de bandas
+            return redirect('bandas')  # Asegúrate de tener la URL 'bandas' configurada en tu archivo urls.py
+    else:
+        # Si la solicitud es GET, mostramos el formulario vacío
+        form = BandaForm()
+
+    return render(request, 'addBanda.html', {'form': form})

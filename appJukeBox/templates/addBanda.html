@@ -1,0 +1,36 @@
+<!-- appJukeBox/templates/add_banda.html -->
+{% extends 'base.html' %}
+
+{% block title %}Agregar Banda{% endblock %}
+
+
+{% block bradcam_area_breadcam_bg_2 %}
+    <!-- bradcam_area  -->
+    <div class="bradcam_area breadcam_bg_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>AGREGAR BANDA</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+{% endblock %}
+
+{% block content %}
+  <h2>Agregar Nueva Banda</h2>
+
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>HOLA</p>
+    {{ form.as_p }}  <!-- Muestra el formulario de manera sencilla -->
+    
+    <button type="submit">Guardar Banda</button>
+  </form>
+
+  <br>
+  <a href="{% url 'bandas' %}">Volver al listado de bandas</a>
+{% endblock %}
