@@ -97,11 +97,12 @@
           </div>
         </form>
       </div>
+      
 
   <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <p>HOLA</p>
-    {{ form.as_p }}  <!-- Muestra el formulario de manera sencilla -->
+    {{ form.as_p }}  
     
     <button type="submit">Guardar Banda</button>
   </form>
