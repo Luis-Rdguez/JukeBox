@@ -3,7 +3,6 @@
 
 {% block title %}Agregar Banda{% endblock %}
 
-
 {% block bradcam_area_breadcam_bg_2 %}
     <!-- bradcam_area  -->
     <div class="bradcam_area breadcam_bg_2">
@@ -20,92 +19,65 @@
     <!--/ bradcam_area  -->
 {% endblock %}
 
-{% block section-top-border%}  
+{% block section-top-border %}
   <div class="section-top-border">
     <div class="row">
       <div class="col-lg-8 col-md-8">
-        <h3 class="mb-30">Form Element</h3>
-        <form action="#">
+        <h3 class="mb-30">Formulario para Agregar Banda</h3>
+
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+
+          <!-- Nombre de la Banda -->
           <div class="mt-10">
-            <input type="text" name="first_name" placeholder="First Name"
-              onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required
-              class="single-input">
-          </div>
-          <div class="mt-10">
-            <input type="text" name="last_name" placeholder="Last Name"
-              onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required
-              class="single-input">
-          </div>
-          <div class="mt-10">
-            <input type="text" name="last_name" placeholder="Last Name"
-              onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required
-              class="single-input">
-          </div>
-          <div class="mt-10">
-            <input type="email" name="EMAIL" placeholder="Email address"
-              onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required
-              class="single-input">
-          </div>
-          <div class="input-group-icon mt-10">
-            <div class="icon"><i class="fa fa-thumb-tack" aria-hidden="true"></i></div>
-            <input type="text" name="address" placeholder="Address" onfocus="this.placeholder = ''"
-              onblur="this.placeholder = 'Address'" required class="single-input">
-          </div>
-          <div class="input-group-icon mt-10">
-            <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
-            <div class="form-select" id="default-select"">
-                  <select>
-                    <option value=" 1">City</option>
-              <option value="1">Dhaka</option>
-              <option value="1">Dilli</option>
-              <option value="1">Newyork</option>
-              <option value="1">Islamabad</option>
-              </select>
-            </div>
-          </div>
-          <div class="input-group-icon mt-10">
-            <div class="icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
-            <div class="form-select" id="default-select"">
-                  <select>
-                    <option value=" 1">Country</option>
-              <option value="1">Bangladesh</option>
-              <option value="1">India</option>
-              <option value="1">England</option>
-              <option value="1">Srilanka</option>
-              </select>
-            </div>
+            <label for="id_nombre">Nombre de la Banda</label>
+            {{ form.nombre }}
           </div>
 
+          <!-- Descripción de la Banda -->
           <div class="mt-10">
-            <textarea class="single-textarea" placeholder="Message" onfocus="this.placeholder = ''"
-              onblur="this.placeholder = 'Message'" required></textarea>
+            <label for="id_descripcion">Descripción</label>
+            {{ form.descripcion }}
           </div>
+
+          <!-- País de Origen -->
           <div class="mt-10">
-            <input type="text" name="first_name" placeholder="Primary color"
-              onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" required
-              class="single-input-primary">
+            <label for="id_pais">País de Origen</label>
+            {{ form.pais }}
           </div>
+
+          <!-- Fecha de Inicio -->
           <div class="mt-10">
-            <input type="text" name="first_name" placeholder="Accent color"
-              onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" required
-              class="single-input-accent">
+            <label for="id_fechaIni">Fecha de Inicio</label>
+            {{ form.fechaIni }}
           </div>
+
+          <!-- Fecha de Finalización -->
           <div class="mt-10">
-            <input type="text" name="first_name" placeholder="Secondary color"
-              onfocus="this.placeholder = ''" onblur="this.placeholder = 'Secondary color'"
-              required class="single-input-secondary">
+            <label for="id_fechaFin">Fecha de Finalización</label>
+            {{ form.fechaFin }}
+          </div>
+
+          <!-- Foto de la Banda -->
+          <div class="mt-10">
+            <label for="id_foto">Foto de la Banda</label>
+            {{ form.foto }}
+          </div>
+
+          <!-- Estilos de la Banda -->
+          <div class="mt-10">
+            <label for="id_estilos">Estilos Musicales</label>
+            {{ form.estilos }}  <!-- CheckboxSelectMultiple para seleccionar múltiples estilos -->
+          </div>
+
+          <!-- Botón para enviar el formulario -->
+          <div class="mt-10">
+            <button type="submit" class="btn btn-primary">Guardar Banda</button>
           </div>
         </form>
+
+       
       </div>
-      
-
-  <form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    <p>HOLA</p>
-    {{ form.as_p }}  
-    
-    <button type="submit">Guardar Banda</button>
-  </form>
-
-  <br>
+    </div>
+  </div>
 {% endblock %}
