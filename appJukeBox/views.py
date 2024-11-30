@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404, redirect
+from django.urls import reverse  # Para generar URLs dinámicamente
 from .models import *
 from .forms import *
 
@@ -41,7 +42,7 @@ def show_pais(request, pais_id):
         'pais': pais,
         'bandera': pais.bandera, 
         'bandas': bandas,  # Se pasa la queryset directamente para asegurar el acceso a 'id'
-        'numero_bandas': bandas.count(),
+        'numero_bandas': len(bandas),
 
     }
     return render(request, 'pais.html', context)
@@ -93,7 +94,7 @@ def show_estilo(request, estilo_id):
         'estilo': estilo,
         'bandas': bandas,  # Pasar las bandas directamente en el contexto
         'descripcion' : estilo.descripcion,
-        'numero_bandas': bandas.count(),  # Contar el número de bandas en este estilo
+        'numero_bandas': len(bandas),  # Contar el número de bandas en este estilo
     }
     return render(request, 'estilo.html', context)
 
@@ -127,21 +128,54 @@ def show_paises(request):
     return render(request, 'paises.html', context)
 
 
-
 def add_banda(request):
-    # Si la solicitud es POST, procesamos el formulario
     if request.method == 'POST':
-        form = BandaForm(request.POST, request.FILES)  # request.FILES es necesario para manejar archivos (como la foto)
-        
+        form = BandaForm(request.POST, request.FILES)
         if form.is_valid():
-            # Si el formulario es válido, lo guardamos en la base de datos
-            banda = form.save(commit=False)  # Preparamos la banda pero aún no la guardamos completamente
-            banda.save()  # Guardamos la banda en la base de datos
+            banda = form.save(commit=False)  # Guarda la banda sin los campos ManyToMany
+            banda.save()  # Guarda la banda en la base de datos
+            form.save_m2m()  # Guarda los campos ManyToMany (estilos)
             
-            # Redirigimos a alguna página después de guardar, por ejemplo, al listado de bandas
-            return redirect('bandas')  # Asegúrate de tener la URL 'bandas' configurada en tu archivo urls.py
+            # Redirigir a la página de descripción de la banda recién creada
+            return redirect(reverse('banda', args=[banda.id]))
     else:
-        # Si la solicitud es GET, mostramos el formulario vacío
         form = BandaForm()
 
     return render(request, 'addBanda.html', {'form': form})
+
+
+def add_pais(request):
+    if request.method == 'POST':
+        form = PaisForm(request.POST)
+        if form.is_valid():
+            pais = form.save()  # Guarda el país en la base de datos
+            return redirect(reverse('pais', args=[pais.id]))
+    else:
+        form = PaisForm()
+
+    return render(request, 'addPais.html', {'form': form})
+
+def add_estilo(request):
+    if request.method == 'POST':
+        form = EstiloForm(request.POST)
+        if form.is_valid():
+            # Crear el objeto Estilo pero aún no guardarlo en la base de datos
+            estilo = form.save(commit=False)
+
+            # Generar el código del estilo automáticamente
+            estilo.codigo = estilo.estilo[:3].upper()  # Las tres primeras letras del nombre del estilo
+            estilo.save()  # Ahora guardamos el estilo
+
+            # Obtener las bandas seleccionadas del formulario
+            bandas_seleccionadas = form.cleaned_data['bandas']
+
+            # Asociar las bandas seleccionadas al estilo recién creado
+            for banda in bandas_seleccionadas:
+                banda.estilos.add(estilo)  # Usamos el método `add()` para agregar el estilo a cada banda
+
+            # Redirigir a la vista de detalle del estilo
+            return redirect(reverse('estilo', args=[estilo.id]))
+    else:
+        form = EstiloForm()
+
+    return render(request, 'addEstilo.html', {'form': form})

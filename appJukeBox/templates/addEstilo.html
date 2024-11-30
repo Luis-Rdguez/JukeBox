@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Agregar Estilo{% endblock %}
+
+
+{% block bradcam_area_breadcam_bg_2 %}
+    <!-- bradcam_area  -->
+    <div class="bradcam_area breadcam_bg_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>AGREGAR ESTILO</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+{% endblock %}
+
+{% block section-top-border %}
+  <div class="section-top-border">
+    <div class="row">
+      <div class="col-lg-8 col-md-8">
+        <h3 class="mb-30">Formulario para Agregar Estilo</h3>
+
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+
+          <!-- Nombre del Estilo -->
+          <div class="mt-10">
+            <label for="id_estilo">Nombre del Estilo</label>
+            {{ form.estilo }}
+          </div>
+
+          <!-- Descripción del Estilo -->
+          <div class="mt-10">
+            <label for="id_descripcion">Descripción del Estilo</label>
+            {{ form.descripcion }}
+          </div>
+
+          <!-- Bandas Relacionadas con el Estilo -->
+          <div class="mt-10">
+            <label for="id_bandas">Bandas Relacionadas</label>
+            {{ form.bandas }}  <!-- Lista de bandas con select2 para buscador -->
+          </div>
+
+          <!-- Botón para enviar el formulario -->
+          <div class="mt-10">
+            <button type="submit" class="btn btn-primary">Guardar Estilo</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Carga de Select2 y del script personalizado -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+<script src="{% static 'js/select2.js' %}"></script>
+{% endblock %}
