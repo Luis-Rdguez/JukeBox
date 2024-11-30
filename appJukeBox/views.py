@@ -14,15 +14,13 @@ def index(request):
 
 # Página de inicio: Muestra una banda destacada por país
 def show_bandas(request):
-    bandas = []
-    for banda in Banda.objects.all():
-        bandas.append(banda)
+    bandas = get_list_or_404(Banda)
     context = {'bandas': bandas}
     return render(request, 'bandas.html', context)
 
 # Listado de todos los países, incluyendo el número de bandas de cada país
 def index_pais(request):
-    paises = Pais.objects.all().order_by('pais')
+    paises = get_list_or_404(Pais.objects.all().order_by('pais'))
     context = {
         'lista_pais': [
             {
@@ -38,7 +36,7 @@ def index_pais(request):
 # En views.py
 def show_pais(request, pais_id):
     pais = get_object_or_404(Pais, pk=pais_id)
-    bandas = pais.banda_set.all()
+    bandas = get_list_or_404(pais.banda_set.all())
     context = {
         'pais': pais,
         'bandera': pais.bandera, 
@@ -52,7 +50,7 @@ def show_pais(request, pais_id):
 # Listado de bandas de un país específico
 def index_bandas(request, pais_id):
     pais = get_object_or_404(Pais, pk=pais_id)
-    bandas = pais.banda_set.all()
+    bandas = get_list_or_404(pais.banda_set.all())
     context = {
         'pais': pais,
         'bandas': [
@@ -90,7 +88,7 @@ def show_banda(request, banda_id):
 # Detalle de un estilo musical: incluye las bandas asociadas y el número total de bandas en ese estilo
 def show_estilo(request, estilo_id):
     estilo = get_object_or_404(Estilo, pk=estilo_id)
-    bandas = estilo.banda_set.all()  # Obtener todas las bandas que tienen el estilo actual
+    bandas = get_list_or_404(estilo.banda_set.all())  # Obtener todas las bandas que tienen el estilo actual
     context = {
         'estilo': estilo,
         'bandas': bandas,  # Pasar las bandas directamente en el contexto
@@ -101,19 +99,13 @@ def show_estilo(request, estilo_id):
 
 # Listado de todos los estilos, incluyendo el número de bandas de cada estilo
 def show_estilos(request):
-    estilos = []
-    for estilo in Estilo.objects.all():
-        estilos.append(estilo) 
+    estilos = get_list_or_404(Estilo)
     context = {'estilos': estilos }
     return render(request, 'estilos.html', context)
 
-# Listado de todos los estilos, incluyendo el número de bandas de cada estilo
-from django.shortcuts import render
-from .models import Pais, Banda
-
 def show_paises(request):
     # Obtiene todos los países y el total de bandas
-    paises = Pais.objects.all()
+    paises = get_list_or_404(Pais)
     total_bandas = Banda.objects.count()
 
     # Construye una lista de diccionarios con datos calculados por cada país
