@@ -34,14 +34,13 @@ def index_pais(request):
     return render(request, 'bandas.html', context)
 
 # Detalle de un país: incluye todas las bandas de ese país y el conteo de bandas
-# En views.py
 def show_pais(request, pais_id):
     pais = get_object_or_404(Pais, pk=pais_id)
     bandas = get_list_or_404(pais.banda_set.all())
     context = {
         'pais': pais,
         'bandera': pais.bandera, 
-        'bandas': bandas,  # Se pasa la queryset directamente para asegurar el acceso a 'id'
+        'bandas': bandas,  
         'numero_bandas': len(bandas),
 
     }
@@ -162,9 +161,10 @@ def add_estilo(request):
             # Crear el objeto Estilo pero aún no guardarlo en la base de datos
             estilo = form.save(commit=False)
 
-            # Generar el código del estilo automáticamente
-            estilo.codigo = estilo.estilo[:3].upper()  # Las tres primeras letras del nombre del estilo
-            estilo.save()  # Ahora guardamos el estilo
+            # Si quieres realizar algún procesamiento antes de guardar, puedes hacerlo aquí
+            # No necesitas generar un código, ya que lo has eliminado del modelo
+
+            estilo.save()  # Ahora guardamos el estilo en la base de datos
 
             # Obtener las bandas seleccionadas del formulario
             bandas_seleccionadas = form.cleaned_data['bandas']
@@ -174,7 +174,7 @@ def add_estilo(request):
                 banda.estilos.add(estilo)  # Usamos el método `add()` para agregar el estilo a cada banda
 
             # Redirigir a la vista de detalle del estilo
-            return redirect(reverse('estilo', args=[estilo.id]))
+            return redirect(reverse('estilo', args=[estilo.id]))  # Asumimos que la vista detalle se accede por id del estilo
     else:
         form = EstiloForm()
 

@@ -11,6 +11,7 @@ urlpatterns = [
     path('estilos/<int:estilo_id>/', views.show_estilo, name='estilo'),
     path('estilos/', views.show_estilos, name='todos_estilos'), # Esto funciona en estiloso y te muestra todos los estilos
     path('addBanda/', views.add_banda, name='addBanda'),  # URL para agregar una nueva banda
-    path('addEstilo/', views.add_estilo, name='addEstilo'),  # URL para agregar una nueva banda
+    path('addEstilo/', views.add_estilo, name='addEstilo'),  # URL para agregar un nuevo estilo
+    path('addPais/', views.add_pais, name='addPais'),  # URL para agregar un nuevo pais
 
 ]

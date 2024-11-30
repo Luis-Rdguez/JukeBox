@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Agregar Pais{% endblock %}
+
+{% block bradcam_area_breadcam_bg_2 %}
+    <!-- bradcam_area  -->
+    <div class="bradcam_area breadcam_bg_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>AGREGAR PAIS</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+{% endblock %}
+
+
+{% block section-top-border %}
+  <div class="section-top-border">
+    <div class="row">
+      <div class="col-lg-8 col-md-8">
+        <h3 class="mb-30">Formulario para Agregar País</h3>
+
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <!-- Nombre del País -->
+          <div class="mt-10">
+            <label for="id_pais">Nombre del País</label>
+            {{ form.pais }}
+          </div>
+
+
+          <!-- Bandera del País -->
+          <div class="mt-10">
+            <label for="id_bandera">Bandera (URL)</label>
+            {{ form.bandera }}
+          </div>
+
+          <!-- Botón para enviar el formulario -->
+          <div class="mt-10">
+            <button type="submit" class="btn btn-primary">Guardar País</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
