@@ -28,7 +28,7 @@
                         <div class="music_field">
                             <div class="audio_name">
                                 <div class="name">
-                                    <h4><a href="/appJukeBox/estilos">{{ e.estilo}}</a></h4>
+                                    <h4><a href="{% url 'estilo' e.id %}">{{ e.estilo}}</a></h4>
                                 </div>
                                 <audio preload="auto" controls>
                                     <source src="https://www.w3schools.com/html/horse.mp3">
@@ -62,7 +62,14 @@
             </div>
         </div>
         {% endif %}
+        <div class="row align-items-center justify-content-center mb-20">
+            <div class="col-xl-12 text-center">
+                <h3>¿No encuentras tu estilo favorito?</h3>
+                <a href="{% url 'addEstilo' %}" class="boxed-btn">Añadir Estilo</a>  <!-- Botón para añadir una banda -->
+            </div>
+        </div>
     </div>
+    
 </div>
 <!-- music_area end  -->
 {% endblock %}

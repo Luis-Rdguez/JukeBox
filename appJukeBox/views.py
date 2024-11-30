@@ -36,14 +36,24 @@ def index_pais(request):
 # Detalle de un país: incluye todas las bandas de ese país y el conteo de bandas
 def show_pais(request, pais_id):
     pais = get_object_or_404(Pais, pk=pais_id)
-    bandas = get_list_or_404(pais.banda_set.all())
+
+    # Intentar obtener las bandas asociadas a este país
+    bandas = pais.banda_set.all()
+
+    # Si no hay bandas, pasar un mensaje especial
+    if not bandas:
+        no_bandas_message = "No hay bandas creadas para este país."
+
+    # Preparar el contexto para pasar a la plantilla
     context = {
         'pais': pais,
-        'bandera': pais.bandera, 
-        'bandas': bandas,  
+        'bandera': pais.bandera,
+        'bandas': bandas,
         'numero_bandas': len(bandas),
-
+        'no_bandas_message': no_bandas_message if not bandas else None,  # Mensaje si no hay bandas
     }
+
+    # Renderizar la plantilla
     return render(request, 'pais.html', context)
 
 
@@ -148,7 +158,7 @@ def add_pais(request):
         form = PaisForm(request.POST)
         if form.is_valid():
             pais = form.save()  # Guarda el país en la base de datos
-            return redirect(reverse('todos_paises'))
+            return redirect(reverse('pais', args=[pais.id]))
     else:
         form = PaisForm()
 
