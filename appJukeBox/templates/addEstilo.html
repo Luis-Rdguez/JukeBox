@@ -23,27 +23,25 @@
   <div class="section-top-border">
     <div class="row">
       <div class="col-lg-8 col-md-8">
-        <h3 class="mb-30">Formulario para Agregar Estilo</h3>
-
+        <h3 class="mb-30">Agregar Estilo</h3>
         <form method="POST" enctype="multipart/form-data">
           {% csrf_token %}
 
           <!-- Nombre del Estilo -->
           <div class="mt-10">
-            <label for="id_estilo">Nombre del Estilo</label>
-            {{ form.estilo }}
+            <input type="text" name="nombre" placeholder="Nombre del Estilo"required
+                class="single-input">
           </div>
 
           <!-- Descripción del Estilo -->
           <div class="mt-10">
-            <label for="id_descripcion">Descripción del Estilo</label>
-            {{ form.descripcion }}
+          <textarea name="descripcion" placeholder="Descripción del Estilo" required
+              class="single-textarea"></textarea>
           </div>
 
-          <!-- Bandas Relacionadas con el Estilo -->
           <div class="mt-10">
-            <label for="id_bandas">Bandas Relacionadas</label>
-            {{ form.bandas }}  <!-- Lista de bandas con select2 para buscador -->
+            <label for="id_bandas" class="font-weight-bold">Bandas Relacionadas</label>
+            {{ form.bandas }}  <!-- Renderiza el campo de bandas, que ya está configurado para select2 -->
           </div>
 
           <!-- Botón para enviar el formulario -->

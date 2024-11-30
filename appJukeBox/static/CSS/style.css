@@ -26,6 +26,51 @@ body {
   font-style: normal;
 }
 
+/* Estilo para el contenedor del select */
+.select2-container {
+  width: 100% !important;  /* Asegúrate de que ocupe todo el ancho disponible */
+  border-radius: 5px;
+  border: 1px solid #ddd;  /* Borde gris claro */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+/* Estilo para el cuadro de búsqueda de Select2 */
+.select2-search__field {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Estilo para las opciones seleccionadas */
+.select2-selection {
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+/* Estilo cuando se pasa el ratón sobre una opción */
+.select2-results__option--highlighted {
+  background-color: #007bff;  /* Color de fondo cuando se pasa el ratón */
+  color: white;  /* Color de texto */
+}
+
+/* Estilo para los elementos seleccionados */
+.select2-selection__rendered {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Estilo para la caja de la lista de opciones */
+.select2-results__options {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+
 /* line 12, ../../Arafath/CL/Cl November/221. Music/HTML/scss/theme-default.scss */
 .img {
   max-width: 100%;
