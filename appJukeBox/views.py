@@ -148,7 +148,7 @@ def add_pais(request):
         form = PaisForm(request.POST)
         if form.is_valid():
             pais = form.save()  # Guarda el país en la base de datos
-            return redirect(reverse('pais', args=[pais.id]))
+            return redirect(reverse('todos_paises'))
     else:
         form = PaisForm()
 
