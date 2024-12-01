@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 10:42+0100\n"
+"POT-Creation-Date: 2024-12-01 11:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -114,7 +114,7 @@ msgstr "Save Country"
 
 #: .\appJukeBox\templates\banda.html:3 .\appJukeBox\templates\bandas.html:3
 #: .\appJukeBox\templates\estilo.html:3 .\appJukeBox\templates\estilos.html:3
-#: .\appJukeBox\templates\index.html:3 .\appJukeBox\templates\index.html:13
+#: .\appJukeBox\templates\index.html:5 .\appJukeBox\templates\index.html:15
 #: .\appJukeBox\templates\pais.html:3
 msgid "JukeBox"
 msgstr "JukeBox"
@@ -135,22 +135,22 @@ msgstr "Start Date"
 msgid "Fecha de finalización"
 msgstr "End Date"
 
-#: .\appJukeBox\templates\base.html:44
+#: .\appJukeBox\templates\banda.html:46 .\appJukeBox\templates\base.html:45
 #: .\appJukeBox\templates\estilos.html:12
 msgid "Estilos"
 msgstr "Styles"
 
-#: .\appJukeBox\templates\bandas.html:12 .\appJukeBox\templates\base.html:43
+#: .\appJukeBox\templates\bandas.html:12 .\appJukeBox\templates\base.html:44
 msgid "Bandas"
 msgstr "Bands"
 
 #: .\appJukeBox\templates\bandas.html:45 .\appJukeBox\templates\estilo.html:53
-#: .\appJukeBox\templates\estilos.html:41 .\appJukeBox\templates\index.html:56
+#: .\appJukeBox\templates\estilos.html:41 .\appJukeBox\templates\index.html:58
 #: .\appJukeBox\templates\pais.html:59
 msgid "Más Información"
 msgstr "More Information"
 
-#: .\appJukeBox\templates\bandas.html:60 .\appJukeBox\templates\index.html:79
+#: .\appJukeBox\templates\bandas.html:60 .\appJukeBox\templates\index.html:81
 msgid "No hay bandas creadas."
 msgstr "No bands created."
 
@@ -162,33 +162,29 @@ msgstr "Can't find your band?"
 msgid "Añade una nueva banda"
 msgstr "Add a new band"
 
-#: .\appJukeBox\templates\base.html:42
+#: .\appJukeBox\templates\base.html:43
 msgid "Inicio"
 msgstr "Home"
 
-#: .\appJukeBox\templates\base.html:45 .\appJukeBox\templates\paises.html:24
+#: .\appJukeBox\templates\base.html:46 .\appJukeBox\templates\paises.html:24
 msgid "Paises"
 msgstr "Countries"
 
-#: .\appJukeBox\templates\base.html:76
+#: .\appJukeBox\templates\base.html:77
 msgid "Servicios"
 msgstr "Services"
 
-#: .\appJukeBox\templates\base.html:80
+#: .\appJukeBox\templates\base.html:81
 msgid "Suscríbete"
 msgstr "Subscribe"
 
-#: .\appJukeBox\templates\base.html:83
+#: .\appJukeBox\templates\base.html:84
 msgid "Para cualquier problema contáctenos empleando su email."
 msgstr "For any issues, contact us using your email."
 
-#: .\appJukeBox\templates\base.html:88
+#: .\appJukeBox\templates\base.html:89
 msgid "Contáctanos"
 msgstr "Contact Us"
-
-#: .\appJukeBox\templates\base.html:108
-msgid "Copyright"
-msgstr "Copyright"
 
 #: .\appJukeBox\templates\estilo.html:27
 msgid "Hay"
@@ -214,22 +210,91 @@ msgstr "Can't find your favorite style?"
 msgid "Añadir Estilo"
 msgstr "Add Style"
 
-#: .\appJukeBox\templates\index.html:28
+#: .\appJukeBox\templates\index.html:30
 msgid "Bandas Más Famosas"
 msgstr "Most Famous Bands"
 
-#: .\appJukeBox\templates\index.html:67
+#: .\appJukeBox\templates\index.html:69
 msgid "Todas las Bandas"
 msgstr "All Bands"
 
-#: .\appJukeBox\templates\index.html:73
-msgid "Todos los Estilos"
-msgstr "All Styles"
+#: .\appJukeBox\templates\pais.html:29
+#, python-format
+msgid ""
+"\n"
+"                        %(pais.pais)s tiene %(numero_bandas)s banda\n"
+"                    "
+msgid_plural ""
+"\n"
+"                        %(pais.pais)s tiene %(numero_bandas)s bandas\n"
+"                    "
+msgstr[0] ""
+msgstr[1] ""
 
-#: .\appJukeBox\templates\index.html:79
-msgid "No hay Estilos disponibles."
-msgstr "No Styles Available."
+#: .\appJukeBox\templates\pais.html:70
+#, fuzzy
+#| msgid "No hay bandas creadas para este estilo."
+msgid "No hay bandas para este pais"
+msgstr "No bands created for this country."
 
-#: .\appJukeBox\templates\index.html:107
-msgid "No hay Países disponibles."
-msgstr "No Countries Available."
+#: .\appJukeBox\templates\paises.html:3
+#, fuzzy
+#| msgid "JukeBox"
+msgid "Paises - JukeBox"
+msgstr "Countries - JukeBox"
+
+#: .\appJukeBox\templates\paises.html:12
+msgid "Lista de Paises"
+msgstr "List of Countries"
+
+#: .\appJukeBox\templates\paises.html:29
+#, fuzzy
+#| msgid "Paises"
+msgid "Pais"
+msgstr "Country"
+
+#: .\appJukeBox\templates\paises.html:30
+#, fuzzy
+#| msgid "Nombre de la Banda"
+msgid "Numero de bandas"
+msgstr "Number of bands"
+
+#: .\appJukeBox\templates\paises.html:31
+msgid "Porcentaje"
+msgstr "Percentage"
+
+#: .\appJukeBox\templates\paises.html:61
+#, fuzzy
+#| msgid "¿No encuentras tu banda?"
+msgid "¿No encuentras tu pais?"
+msgstr "Can't find your country?"
+
+#: .\appJukeBox\templates\paises.html:62
+#, fuzzy
+#| msgid "Añadir Estilo"
+msgid "Añadir pais"
+msgstr "Add Country"
+
+#: .\appJukeBox\views.py:17
+#, fuzzy
+#| msgid "Fecha de inicio"
+msgid "Página de inicio"
+msgstr "Home Page"
+
+#: .\appJukeBox\views.py:50
+#, fuzzy
+#| msgid "No hay bandas creadas para este estilo."
+msgid "No hay bandas creadas para este país."
+msgstr "No bands created for this style."
+
+#~ msgid "Copyright"
+#~ msgstr "Copyright"
+
+#~ msgid "Todos los Estilos"
+#~ msgstr "All Styles"
+
+#~ msgid "No hay Estilos disponibles."
+#~ msgstr "No Styles Available."
+
+#~ msgid "No hay Países disponibles."
+#~ msgstr "No Countries Available."
