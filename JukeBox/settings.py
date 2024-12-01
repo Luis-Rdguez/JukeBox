@@ -113,6 +113,10 @@ LANGUAGES = [
     # Agrega otros idiomas si es necesario
 ]
 
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
+
 LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
