@@ -2,15 +2,20 @@ from django.shortcuts import render, get_object_or_404, get_list_or_404, redirec
 from django.urls import reverse  # Para generar URLs dinámicamente
 from .models import *
 from .forms import *
+from django.utils.translation import gettext as _
 
 # Página de inicio: Muestra una banda destacada por país
 def index(request):
     bandas_por_pais = []
-    for pais in Pais.objects.all():
+    paises = get_list_or_404(Pais)
+    for pais in paises:
         banda = Banda.objects.filter(pais=pais).order_by('fechaIni').first()
         if banda:
             bandas_por_pais.append(banda)
-    context = {'bandas_por_pais': bandas_por_pais}
+    context = {
+        'bandas_por_pais': bandas_por_pais,
+        'titulo': _("Página de inicio"),  # Texto estático traducible
+        }
     return render(request, 'index.html', context)
 
 # Página de inicio: Muestra una banda destacada por país
@@ -42,7 +47,7 @@ def show_pais(request, pais_id):
 
     # Si no hay bandas, pasar un mensaje especial
     if not bandas:
-        no_bandas_message = "No hay bandas creadas para este país."
+        no_bandas_message = _("No hay bandas creadas para este país.")
 
     # Preparar el contexto para pasar a la plantilla
     context = {
