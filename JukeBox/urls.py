@@ -16,8 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
-    path('', include('appJukeBox.urls')),
-    path('admin/', admin.site.urls),
+    # Ruta para cambiar el idioma (necesaria para el formulario de selección de idioma)
+    path('i18n/', include('django.conf.urls.i18n')),
 ]
+
+# Añadimos las rutas principales con soporte para el prefijo de idioma
+urlpatterns += i18n_patterns(
+    path('', include('appJukeBox.urls')),  # Tu app principal
+    path('admin/', admin.site.urls),       # Panel de administración
+    prefix_default_language=False,         # Opcional: sin prefijo para el idioma por defecto
+)
