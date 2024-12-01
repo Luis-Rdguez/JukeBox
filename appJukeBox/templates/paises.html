@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %} Paises - JukeBox{% endblock %}
+{% block title %} {% trans "Paises - JukeBox" %} {% endblock %}
 
 {% block bradcam_area_breadcam_bg_2 %}
     <!-- bradcam_area  -->
@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>Lista de Paises</h3>
+                        <h3>{% trans "Lista de Paises" %}</h3>
                     </div>
                 </div>
             </div>
@@ -21,14 +21,14 @@
 <div class="whole-wrap">
     <div class="container box_1170">
         <div class="section-top-border">
-            <h3 class="mb-30">Paises</h3>
+            <h3 class="mb-30">{% trans "Paises" %}</h3>
             <div class="progress-table-wrap">
                 <div class="progress-table">
                     <div class="table-head">
                         <div class="serial">#</div>
-                        <div class="country">Pais</div>    
-                        <div class="visit">Numero de bandas</div>
-                        <div class="percentage">Porcentaje</div>
+                        <div class="country">{% trans "Pais" %}</div>
+                        <div class="visit">{% trans "Numero de bandas" %}</div>
+                        <div class="percentage">{% trans "Porcentaje" %}</div>
                     </div>
                     
                     <!-- Itera sobre cada país en paises_info -->
@@ -58,8 +58,8 @@
     </div>
     <div class="row align-items-center justify-content-center mb-20">
         <div class="col-xl-12 text-center">
-            <h3>¿No encuentras tu pais?</h3>
-            <a href="{% url 'addPais' %}" class="boxed-btn">Añadir pais</a>  <!-- Botón para añadir una banda -->
+            <h3>{% trans "¿No encuentras tu pais?" %}</h3>
+            <a href="{% url 'addPais' %}" class="boxed-btn">{% trans "Añadir pais" %}</a>  <!-- Botón para añadir una banda -->
         </div>
     </div>
 </div>

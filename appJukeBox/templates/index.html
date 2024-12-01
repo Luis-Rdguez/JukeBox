@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}JukeBox{% endblock %}
+{% block title %}{% trans "JukeBox" %}{% endblock %}
 
 {% block music_area %}
 <!-- slider_area_start -->
@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="slider_text text-center ">
-                        <h3>JukeBox</h3>
+                        <h3>{% trans "JukeBox" %}</h3>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="section_title text-center mb-65">
-                    <h3>Bandas Más Famosas</h3>
+                    <h3>{% trans "Bandas Más Famosas" %}</h3>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-xl-3 col-md-3">
                         <div class="music_btn">
-                            <a href="{% url 'banda' e.id %}" class="boxed-btn">Más Información</a>
+                            <a href="{% url 'banda' e.id %}" class="boxed-btn">{% trans "Más Información" %}</a>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
         <!-- Botón "Todas las bandas" centrado debajo de la última banda -->
         <div class="row justify-content-center mt-4">
             <div class="col-xl-4 col-md-6 text-center">
-                <a href="{% url 'todas_bandas' %}" class="boxed-btn">Todas las Bandas</a>
+                <a href="{% url 'todas_bandas' %}" class="boxed-btn">{% trans "Todas las Bandas" %}</a>
             </div>
         </div>
         
@@ -76,7 +76,7 @@
                         <div class="music_field">
                             <div class="audio_name">
                                 <div class="name">
-                                    <h4>No hay bandas creadas.</h4>
+                                    <h4>{% trans "No hay bandas creadas." %}</h4>
                                 </div>
                             </div>
                         </div>

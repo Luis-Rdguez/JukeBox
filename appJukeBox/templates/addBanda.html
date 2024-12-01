@@ -1,7 +1,7 @@
 <!-- appJukeBox/templates/add_banda.html -->
 {% extends 'base.html' %}
 
-{% block title %}Agregar Banda{% endblock %}
+{% block title %}{% trans "Agregar Banda" %}{% endblock %}
 
 {% block bradcam_area_breadcam_bg_2 %}
     <!-- bradcam_area  -->
@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>AGREGAR BANDA</h3>
+                      <h3>{% trans "AGREGAR BANDA" %}</h3>
                     </div>
                 </div>
             </div>
@@ -23,60 +23,58 @@
   <div class="section-top-border">
     <div class="row">
       <div class="col-lg-8 col-md-8">
-        <h3 class="mb-30">Formulario para Agregar Banda</h3>
+        <h3 class="mb-30">{% trans "Formulario para Agregar Banda" %}</h3>
 
         <form method="POST" enctype="multipart/form-data">
           {% csrf_token %}
 
           <!-- Nombre de la Banda -->
           <div class="mt-10">
-            <label for="id_nombre">Nombre de la Banda</label>
+            <label for="id_nombre">{% trans "Nombre de la Banda" %}</label>
             {{ form.nombre }}
           </div>
 
           <!-- Descripción de la Banda -->
           <div class="mt-10">
-            <label for="id_descripcion">Descripción</label>
+            <label for="id_descripcion">{% trans "Descripción" %}</label>
             {{ form.descripcion }}
           </div>
 
           <!-- País de Origen -->
           <div class="mt-10">
-            <label for="id_pais">País de Origen</label>
+            <label for="id_pais">{% trans "País de Origen" %}</label>
             {{ form.pais }}
           </div>
 
           <!-- Fecha de Inicio -->
           <div class="mt-10">
-            <label for="id_fechaIni">Fecha de Inicio</label>
+            <label for="id_fechaIni">{% trans "Fecha de Inicio" %}</label>
             {{ form.fechaIni }}
           </div>
 
           <!-- Fecha de Finalización -->
           <div class="mt-10">
-            <label for="id_fechaFin">Fecha de Finalización</label>
+            <label for="id_fechaFin">{% trans "Fecha de Finalización" %}</label>
             {{ form.fechaFin }}
           </div>
 
           <!-- Foto de la Banda -->
           <div class="mt-10">
-            <label for="id_foto">Foto de la Banda</label>
+            <label for="id_foto">{% trans "Foto de la Banda" %}</label>
             {{ form.foto }}
           </div>
 
           <!-- Estilos de la Banda -->
           <div class="mt-10">
-            <label for="id_estilos">Estilos Musicales</label>
+            <label for="id_estilos">{% trans "Estilos Musicales" %}</label>
             {{ form.estilos }}  <!-- CheckboxSelectMultiple para seleccionar múltiples estilos -->
           </div>
 
           <!-- Botón para enviar el formulario -->
           <div class="mt-10">
-            <button type="submit" class="btn btn-primary">Guardar Banda</button>
+            <button type="submit" class="btn btn-primary">{% trans "Guardar Banda" %}</button>
           </div>
-        </form>
-
-       
+        </form>       
       </div>
     </div>
   </div>

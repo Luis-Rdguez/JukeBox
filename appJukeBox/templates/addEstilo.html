@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Agregar Estilo{% endblock %}
-
+{% block title %}{% trans "Agregar Estilo" %}{% endblock %}
 
 {% block bradcam_area_breadcam_bg_2 %}
     <!-- bradcam_area  -->
@@ -10,7 +9,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>AGREGAR ESTILO</h3>
+                      <h3>{% trans "AGREGAR ESTILO" %}</h3>
                     </div>
                 </div>
             </div>
@@ -23,30 +22,30 @@
   <div class="section-top-border">
     <div class="row">
       <div class="col-lg-8 col-md-8">
-        <h3 class="mb-30">Agregar Estilo</h3>
+        <h3 class="mb-30">{% trans "Agregar Estilo" %}</h3>
         <form method="POST" enctype="multipart/form-data">
           {% csrf_token %}
 
           <!-- Nombre del Estilo -->
           <div class="mt-10">
-            <input type="text" name="nombre" placeholder="Nombre del Estilo"required
+            <input type="text" name="nombre" placeholder="{% trans 'Nombre del Estilo' %}" required
                 class="single-input">
           </div>
 
           <!-- Descripción del Estilo -->
           <div class="mt-10">
-          <textarea name="descripcion" placeholder="Descripción del Estilo" required
+            <textarea name="descripcion" placeholder="{% trans 'Descripción del Estilo' %}" required
               class="single-textarea"></textarea>
           </div>
 
           <div class="mt-10">
-            <label for="id_bandas" class="font-weight-bold">Bandas Relacionadas</label>
+            <label for="id_bandas" class="font-weight-bold">{% trans 'Bandas Relacionadas' %}</label>
             {{ form.bandas }}  <!-- Renderiza el campo de bandas, que ya está configurado para select2 -->
           </div>
 
           <!-- Botón para enviar el formulario -->
           <div class="mt-10">
-            <button type="submit" class="btn btn-primary">Guardar Estilo</button>
+            <button type="submit" class="btn btn-primary">{% trans 'Guardar Estilo' %}</button>
           </div>
         </form>
       </div>
