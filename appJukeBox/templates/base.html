@@ -22,6 +22,32 @@
     <link rel="stylesheet" href="{% static 'CSS/themify-icons.css' %}">
 </head>
 <body>
+    <!-- Language Switcher -->
+    <div style="position: absolute; top: 10px; right: 10px;">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('es')">Español</button>
+    </div>
+
+    <script>
+        function changeLanguage(lang) {
+            // Obtén la URL actual
+            const currentUrl = window.location.href;
+    
+            // Expresión regular para detectar el prefijo de idioma en la URL
+            const regex = /(\/(es|en)\/)/;
+    
+            // Si se encuentra el prefijo actual, lo reemplaza con el nuevo idioma
+            if (regex.test(currentUrl)) {
+                const newUrl = currentUrl.replace(regex, `/${lang}/`);
+                window.location.href = newUrl;
+            } else {
+                // Si no hay prefijo (por seguridad), agrega el prefijo del idioma al inicio del path
+                const newUrl = currentUrl + `/${lang}/`;
+                window.location.href = newUrl;
+            }
+        }
+    </script>
+    
     <!-- header-start -->
     <header>
         <div class="header-area ">
