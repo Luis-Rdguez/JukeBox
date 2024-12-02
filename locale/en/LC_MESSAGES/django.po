@@ -236,14 +236,10 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: .\appJukeBox\templates\pais.html:72
-#, fuzzy
-#| msgid "No hay bandas creadas para este estilo."
 msgid "No hay bandas para este pais"
 msgstr "No bands created for this country."
 
 #: .\appJukeBox\templates\paises.html:5
-#, fuzzy
-#| msgid "JukeBox"
 msgid "Paises - JukeBox"
 msgstr "Countries - JukeBox"
 
@@ -252,14 +248,10 @@ msgid "Lista de Paises"
 msgstr "List of Countries"
 
 #: .\appJukeBox\templates\paises.html:31
-#, fuzzy
-#| msgid "Paises"
 msgid "Pais"
 msgstr "Country"
 
 #: .\appJukeBox\templates\paises.html:32
-#, fuzzy
-#| msgid "Nombre de la Banda"
 msgid "Numero de bandas"
 msgstr "Number of bands"
 
@@ -268,26 +260,18 @@ msgid "Porcentaje"
 msgstr "Percentage"
 
 #: .\appJukeBox\templates\paises.html:63
-#, fuzzy
-#| msgid "¿No encuentras tu banda?"
 msgid "¿No encuentras tu pais?"
 msgstr "Can't find your country?"
 
 #: .\appJukeBox\templates\paises.html:64
-#, fuzzy
-#| msgid "Añadir Estilo"
 msgid "Añadir pais"
 msgstr "Add Country"
 
 #: .\appJukeBox\views.py:17
-#, fuzzy
-#| msgid "Fecha de inicio"
 msgid "Página de inicio"
 msgstr "Home Page"
 
 #: .\appJukeBox\views.py:50
-#, fuzzy
-#| msgid "No hay bandas creadas para este estilo."
 msgid "No hay bandas creadas para este país."
 msgstr "No bands created for this style."
 
