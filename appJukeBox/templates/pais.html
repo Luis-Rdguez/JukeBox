@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
-{% block title %}JukeBox{% endblock %}
+{% load i18n%}
+
+{% block title %}{% trans "JukeBox" %}{% endblock %}
 
 {% block music_area %}
 <!-- bradcam_area  -->
@@ -25,7 +27,13 @@
         {% if bandas %}
         <div class="row">
             <div class="col-xl-12 text-center mb-1">
-                <p>{{ pais.pais }} tiene {{ numero_bandas }} banda{% if numero_bandas != 1 %}s{% endif %}</p>
+                <p>
+                    {% blocktrans count numero_bandas as numero_bandas %}
+                        {{ pais.pais }} tiene {{ numero_bandas }} banda
+                    {% plural %}
+                        {{ pais.pais }} tiene {{ numero_bandas }} bandas
+                    {% endblocktrans %}
+                </p>
             </div>
         </div>
         {% for e in bandas %}
@@ -50,7 +58,7 @@
                     </div>
                     <div class="col-xl-3 col-md-3">
                         <div class="music_btn">
-                            <a href="{% url 'banda' e.id %}" class="boxed-btn">Más Información</a>
+                            <a href="{% url 'banda' e.id %}" class="boxed-btn">{% trans "Más Información" %}</a>
                         </div>
                     </div>
                 </div>
@@ -61,7 +69,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="section_title text-center mb-65">
-                    <h4>No hay bandas para este pais</h4>
+                    <h4>{% trans "No hay bandas para este pais" %}</h4>
                 </div>
             </div>
         </div>

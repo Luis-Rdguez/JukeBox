@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Agregar Estilo{% endblock %}
-
+{% load i18n%}
+{% block title %}{% trans "Agregar Estilo" %}{% endblock %}
 
 {% block bradcam_area_breadcam_bg_2 %}
     <!-- bradcam_area  -->
@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>AGREGAR ESTILO</h3>
+                      <h3>{% trans "AGREGAR ESTILO" %}</h3>
                     </div>
                 </div>
             </div>
@@ -20,6 +20,7 @@
 {% endblock %}
 
 {% block section-top-border %}
+
 <div class="d-flex justify-content-center align-items-center vh-100">
   <div class="col-lg-6 col-md-8">
     <form method="POST" enctype="multipart/form-data" class="p-4 border rounded bg-light">

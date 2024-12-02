@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
-{% block title %}JukeBox{% endblock %}
+{% load i18n%}
+
+{% block title %}{% trans "JukeBox" %}{% endblock %}
 
 {% block music_area %}
 <!-- bradcam_area  -->
@@ -9,7 +11,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="bradcam_text text-center">
-                    <h3>Bandas</h3>
+                    <h3>{% trans "Bandas" %}</h3>
                 </div>
             </div>
         </div>
@@ -42,7 +44,7 @@
                     </div>
                     <div class="col-xl-3 col-md-3">
                         <div class="music_btn">
-                            <a href="{% url 'banda' e.id %}" class="boxed-btn">Más Información</a>
+                            <a href="{% url 'banda' e.id %}" class="boxed-btn">{% trans "Más Información" %}</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +59,7 @@
                         <div class="music_field">
                             <div class="audio_name">
                                 <div class="name">
-                                    <h4>No hay bandas creadas.</h4>
+                                    <h4>{% trans "No hay bandas creadas." %}</h4>
                                 </div>
                             </div>
                         </div>
@@ -68,8 +70,8 @@
         {% endif %}
         <div class="row align-items-center justify-content-center mb-20">
             <div class="col-xl-12 text-center">
-                <h4>¿No encuentras tu banda?</h4>
-                <a href="{% url 'addBanda' %}" class="boxed-btn">Añade una nueva banda</a>  <!-- Botón para añadir una banda -->
+                <h4>{% trans "¿No encuentras tu banda?" %}</h4>
+                <a href="{% url 'addBanda' %}" class="boxed-btn">{% trans "Añade una nueva banda" %}</a>  <!-- Botón para añadir una banda -->
             </div>
         </div>
     </div>

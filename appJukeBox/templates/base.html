@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load i18n%}
 <head>
     <title>{% block title %}{% endblock %}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% load static %}
+    {% load static%}
     <link rel="stylesheet" href="{% static 'CSS/animate.css' %}">
     <link rel="stylesheet" href="{% static 'CSS/audioplayer' %}">
     <link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css' %}">
@@ -39,10 +40,10 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a class="active" href="{% url 'index' %}">Home</a></li>
-                                            <li><a href="{% url 'todas_bandas' %}">Bandas</a></li>
-                                            <li><a href="{% url 'todos_estilos' %}">Estilos</a></li>  
-                                            <li><a href="{% url 'todos_paises' %}">Paises</a></li>  
+                                            <li><a class="active" href="{% url 'index' %}">{% trans "Inicio" %}</a></li>
+                                            <li><a href="{% url 'todas_bandas' %}">{% trans "Bandas" %}</a></li>
+                                            <li><a href="{% url 'todos_estilos' %}">{% trans "Estilos" %}</a></li>
+                                            <li><a href="{% url 'todos_paises' %}">{% trans "Paises" %}</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -73,19 +74,19 @@
                 <div class="row">
                     <div class="col-xl-6 col-md-6">
                             <div class="footer_widget">
-                                <h3 class="footer_title">Servicios</h3>
+                                <h3 class="footer_title">{% trans "Servicios" %}</h3>
                                 <div class="subscribe-from">
                                     <form action="#">
-                                        <input type="text" placeholder="Introduzca su email">
-                                        <button type="submit">Suscríbete</button>
+                                        <input type="text" placeholder="{% trans 'Introduzca su email' %}">
+                                        <button type="submit">{% trans "Suscríbete" %}</button>
                                     </form>
                                 </div>
-                                <p class="sub_text">Para cualquier problema contáctenos empleando su email.</p>
+                                <p class="sub_text">{% trans "Para cualquier problema contáctenos empleando su email." %}</p>
                             </div>
                     </div>
                     <div class="col-xl-5 col-md-5 offset-xl-1">
                         <div class="footer_widget">
-                            <h3 class="footer_title">Contáctanos</h3>
+                            <h3 class="footer_title">{% trans "Contáctanos" %}</h3>
                             <ul>
                                 <li><a href="#">jukebox@support.com
                                     </a></li>
@@ -105,7 +106,7 @@
                     <div class="col-xl-7 col-md-6">
                         <p class="copy_right">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            <a>Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
+                            <a>Copyright &copy; <script>document.write(new Date().getFullYear());</script> 
                                 All rights reserved | This template is made with Colorlib</a>
                         </p>
                     </div>
