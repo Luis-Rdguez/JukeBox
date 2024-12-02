@@ -27,8 +27,7 @@ class EstiloForm(forms.ModelForm):
     bandas = forms.ModelMultipleChoiceField(
         queryset=Banda.objects.all(),
         widget=forms.SelectMultiple(attrs={
-            'class': 'select2',  # Clase select2 para el buscador
-            'data-placeholder': 'Selecciona bandas relacionadas',
+            'class': 'form-control',  # Clase estándar de Bootstrap o personalizada para estilos básicos
         }),
         required=False
     )
@@ -37,5 +36,14 @@ class EstiloForm(forms.ModelForm):
         model = Estilo
         fields = ['estilo', 'descripcion', 'bandas']
         widgets = {
-            'descripcion': forms.Textarea(attrs={'placeholder': 'Descripción del estilo', 'rows': 3}),
+            'estilo': forms.TextInput(attrs={
+                'placeholder': 'Nombre del estilo',  # Placeholder para el nombre del estilo
+                'class': 'form-control'  # Clase estándar para inputs
+            }),
+            'descripcion': forms.Textarea(attrs={
+                'placeholder': 'Descripción del estilo',
+                'rows': 3,
+                'class': 'form-control'  # Estilo estándar para textarea
+            }),
+            
         }

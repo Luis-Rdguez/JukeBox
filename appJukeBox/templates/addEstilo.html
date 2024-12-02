@@ -20,42 +20,32 @@
 {% endblock %}
 
 {% block section-top-border %}
-  <div class="section-top-border">
-    <div class="row">
-      <div class="col-lg-8 col-md-8">
-        <h3 class="mb-30">Agregar Estilo</h3>
-        <form method="POST" enctype="multipart/form-data">
-          {% csrf_token %}
-
-          <!-- Nombre del Estilo -->
-          <div class="mt-10">
-            <input type="text" name="nombre" placeholder="Nombre del Estilo"required
-                class="single-input">
-          </div>
-
-          <!-- Descripción del Estilo -->
-          <div class="mt-10">
-          <textarea name="descripcion" placeholder="Descripción del Estilo" required
-              class="single-textarea"></textarea>
-          </div>
-
-          <div class="mt-10">
-            <label for="id_bandas" class="font-weight-bold">Bandas Relacionadas</label>
-            {{ form.bandas }}  <!-- Renderiza el campo de bandas, que ya está configurado para select2 -->
-          </div>
-
-          <!-- Botón para enviar el formulario -->
-          <div class="mt-10">
-            <button type="submit" class="btn btn-primary">Guardar Estilo</button>
-          </div>
-        </form>
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="col-lg-6 col-md-8">
+    <form method="POST" enctype="multipart/form-data" class="p-4 border rounded bg-light">
+      {% csrf_token %}
+      
+      <!-- Nombre del Estilo -->
+      <div class="mb-3">
+        {{ form.estilo }}
       </div>
-    </div>
+      
+      <!-- Descripción del Estilo -->
+      <div class="mb-3">
+        {{ form.descripcion }}
+      </div>
+      
+      <!-- Bandas Relacionadas -->
+      <div class="mb-3">
+        <label for="id_bandas" class="form-label">Bandas Relacionadas</label>
+        {{ form.bandas }}
+      </div>
+
+      <!-- Botón para enviar el formulario -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Guardar Estilo</button>
+      </div>
+    </form>
   </div>
-
-
-<!-- Carga de Select2 y del script personalizado -->
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-<script src="{% static 'js/select2.js' %}"></script>
+</div>
 {% endblock %}
