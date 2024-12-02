@@ -7,13 +7,19 @@ class BandaForm(forms.ModelForm):
         model = Banda
         fields = ['nombre', 'descripcion', 'pais', 'fechaIni', 'fechaFin', 'foto', 'estilos']
         
-        # Personaliza los widgets si es necesario
         widgets = {
             'fechaIni': forms.DateInput(attrs={'type': 'date'}),
             'fechaFin': forms.DateInput(attrs={'type': 'date'}),
-            'estilos': forms.CheckboxSelectMultiple(),  # Para seleccionar varios estilos
-            'foto': forms.URLInput()
+            'estilos': forms.SelectMultiple(attrs={
+                'class': 'form-control',  # Clase para estilizarlo con Bootstrap o CSS
+                'placeholder': 'Selecciona estilos'
+            }),
+            'foto': forms.URLInput(attrs={
+                'class': 'form-control',  # Clase para estilizar el campo URL
+                'placeholder': 'URL de la foto'
+            })
         }
+
 
 class PaisForm(forms.ModelForm):
     class Meta:

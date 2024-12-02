@@ -23,7 +23,8 @@
 
 {% block section-top-border %}
   <div class="section-top-border">
-    <div class="row">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+      <div class="col-lg-6 col-md-8">
       <div class="col-lg-8 col-md-8">
         <h3 class="mb-30">{% trans "Formulario para Agregar País" %}</h3>
 
@@ -34,7 +35,6 @@
             <label for="id_pais">{% trans "Nombre del País" %}</label>
             {{ form.pais }}
           </div>
-
 
           <!-- Bandera del País -->
           <div class="mt-10">
@@ -50,4 +50,5 @@
       </div>
     </div>
   </div>
+</div>
 {% endblock %}
