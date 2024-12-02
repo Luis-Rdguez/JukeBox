@@ -13,5 +13,7 @@ urlpatterns = [
     path('addBanda/', views.add_banda, name='addBanda'),  # URL para agregar una nueva banda
     path('addEstilo/', views.add_estilo, name='addEstilo'),  # URL para agregar un nuevo estilo
     path('addPais/', views.add_pais, name='addPais'),  # URL para agregar un nuevo pais
+    path('datos/', views.cargar_guardar_datos, name='datos'),
+
 
 ]

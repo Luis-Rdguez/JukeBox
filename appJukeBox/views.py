@@ -3,6 +3,9 @@ from django.urls import reverse  # Para generar URLs dinámicamente
 from .models import *
 from .forms import *
 from django.utils.translation import gettext as _
+from django.core.management import call_command
+from django.http import JsonResponse, HttpResponse
+import os
 
 # Página de inicio: Muestra una banda destacada por país
 def index(request):
@@ -194,3 +197,28 @@ def add_estilo(request):
         form = EstiloForm()
 
     return render(request, 'addEstilo.html', {'form': form})
+
+def cargar_guardar_datos(request):
+    if request.method == "POST":
+        accion = request.POST.get("accion")
+        if accion == "cargar":
+            try:
+                # Asegúrate de que data.json esté en la carpeta adecuada
+                file_path = os.path.join(os.path.dirname(__file__), 'data.json')  # Ajusta la ruta según donde esté el archivo
+                call_command('loaddata', file_path, verbosity=0)  # Cargar los datos desde data.json
+                return JsonResponse({'status': 'success', 'message': 'Datos cargados correctamente desde data.json.'})
+            except Exception as e:
+                return JsonResponse({'status': 'error', 'message': str(e)})
+        
+        elif accion == "guardar":
+            try:
+                file_path = os.path.join(os.path.dirname(__file__), 'data.json')
+                with open(file_path, 'w', encoding='utf-8') as file:
+                    call_command('dumpdata', '--indent', '4', stdout=file)  # Guardar los datos en data.json
+                return JsonResponse({'status': 'success', 'message': 'Datos guardados correctamente en data.json.'})
+            except Exception as e:
+                return JsonResponse({'status': 'error', 'message': str(e)})
+
+        return HttpResponse(status=405)  # Método no permitido si no es POST
+
+    return render(request, 'datos.html')

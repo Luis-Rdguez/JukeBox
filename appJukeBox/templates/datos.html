@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Cargar y guardar datos" %}{% endblock %}
+
+{% block bradcam_area_breadcam_bg_2 %}
+    <!-- bradcam_area  -->
+    <div class="bradcam_area breadcam_bg_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>{% trans "CARGAR Y GUARDAR DATOS" %}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+    <!-- Botones para Cargar y Guardar Datos -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <!-- Formulario para cargar y guardar datos -->
+            <div class="col-md-5 mb-3">
+                <form method="POST" action="{% url 'datos' %}">
+                    {% csrf_token %}
+                    <!-- Botón para cargar datos -->
+                    <button type="submit" name="accion" value="cargar" class="btn btn-success btn-block">
+                        {% trans "Cargar Datos" %}
+                    </button>
+                </form>
+            </div>
+
+            <div class="col-md-5 mb-3">
+                <form method="POST" action="{% url 'datos' %}">
+                    {% csrf_token %}
+                    <!-- Botón para guardar datos -->
+                    <button type="submit" name="accion" value="guardar" class="btn btn-primary btn-block">
+                        {% trans "Guardar Datos" %}
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
