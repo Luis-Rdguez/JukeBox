@@ -1,0 +1,1677 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2024-10-29T11:40:19.740Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "España",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2024-10-29T11:45:27.926Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Rock",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2024-10-29T11:45:46.649Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Punk",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2024-10-29T11:45:54.873Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "Extremoduro",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2024-10-29T11:46:19.595Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Reggaeton",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2024-10-29T11:46:42.901Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Cumbia",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2024-10-29T11:46:57.432Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Pop",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2024-10-29T11:47:24.595Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Hip-Hop",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2024-10-29T11:47:45.855Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "Estados Unidos de America",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2024-11-05T11:24:22.656Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "Italia",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2024-11-05T11:26:01.531Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Måneskin",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2024-11-05T11:30:36.533Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "asdasdasd",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2024-11-05T11:30:43.288Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Måneskin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"FechaFin\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2024-11-05T11:30:50.039Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "asdasdasd",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2024-11-11T12:20:49.212Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Hip-Hop (Bandas: 0)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2024-11-11T12:21:59.340Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Pop (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2024-11-11T12:22:40.319Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Cumbia (Bandas: 0)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2024-11-11T12:22:55.415Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Reggaeton (Bandas: 0)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2024-11-11T12:23:17.298Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Punk (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2024-11-11T12:23:52.293Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Rock (Bandas: 2)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2024-11-11T12:26:23.184Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "50 Cent",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2024-11-11T12:27:18.707Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "Colombia (Bandas: 0)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2024-11-11T12:29:53.379Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "4",
+        "object_repr": "Lucho Bermúdez",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2024-11-11T12:30:21.095Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "Puerto Rico (Bandas: 0)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2024-11-11T12:32:45.599Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "5",
+        "object_repr": "Bad Bunny",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2024-11-12T08:52:56.253Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "6",
+        "object_repr": "Fito y los Fitipaldis",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2024-11-13T11:27:01.952Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "Puerto Rico (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2024-11-13T11:28:07.484Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "Colombia (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2024-11-13T11:28:34.721Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "Italia (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2024-11-13T11:29:13.925Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "Estados Unidos de America (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2024-11-13T11:29:36.472Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "España (Bandas: 2)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2024-11-13T11:39:14.147Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "Puerto Rico (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2024-11-13T11:42:37.385Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "Puerto Rico (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2024-11-13T11:44:20.764Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "España (Bandas: 2)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2024-11-13T11:49:39.169Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "España (Bandas: 2)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2024-11-13T11:59:08.513Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "6",
+        "object_repr": "Fito y los Fitipaldis",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Foto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2024-11-13T11:59:25.240Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "5",
+        "object_repr": "Bad Bunny",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Foto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2024-11-13T12:00:02.213Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "4",
+        "object_repr": "Lucho Bermúdez",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Foto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2024-11-13T12:01:01.139Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "3",
+        "object_repr": "50 Cent",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Foto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2024-11-13T12:01:18.071Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2",
+        "object_repr": "Måneskin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Foto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2024-11-13T12:01:37.414Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "Extremoduro",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Foto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2024-11-13T12:08:45.484Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "Colombia (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2024-11-13T12:09:00.578Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "Puerto Rico (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2024-11-13T12:09:36.067Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "Italia (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2024-11-13T12:09:48.796Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "Estados Unidos de America (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2024-11-13T12:10:04.731Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "España (Bandas: 2)",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2024-11-14T10:39:44.492Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "España (Bandas: 2)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2024-11-14T10:40:51.994Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "Estados Unidos de America (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2024-11-14T10:41:15.935Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "Puerto Rico (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2024-11-14T10:41:34.390Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "Italia (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2024-11-14T10:41:53.378Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "Colombia (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Bandera\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2024-11-14T10:42:19.279Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Hip-Hop (Bandas: 2)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2024-11-14T10:42:36.237Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Pop (Bandas: 2)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2024-11-14T10:42:47.127Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Punk (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2024-11-14T10:42:54.255Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Rock (Bandas: 3)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2024-11-14T10:43:00.955Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Cumbia (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2024-11-14T10:43:10.789Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Reggaeton (Bandas: 1)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2024-11-30T09:36:08.633Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "8",
+        "object_repr": "La Raíz",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2024-11-30T09:36:13.703Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "7",
+        "object_repr": "La Raíz",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2024-11-30T10:04:54.342Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "7",
+        "object_repr": "Trap (Bandas: 0)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2024-11-30T10:07:33.263Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "10",
+        "object_repr": "Trap (Bandas: 0)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2024-11-30T10:07:33.263Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "9",
+        "object_repr": "Trap (Bandas: 0)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2024-11-30T10:07:33.263Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "Trap (Bandas: 0)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2024-11-30T10:19:36.717Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "11",
+        "object_repr": "Trap (Bandas: 0)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2024-11-30T10:20:51.853Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "12",
+        "object_repr": "Trap (Bandas: 1)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2024-11-30T10:22:55.724Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "9",
+        "object_repr": "La Raíz",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Estilos\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2024-11-30T10:33:56.979Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "11",
+        "object_repr": "Bushido",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Foto\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2024-11-30T10:50:33.265Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "14",
+        "object_repr": "prueba (Bandas: 2)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2024-11-30T10:56:26.477Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "7",
+        "object_repr": "Suiza (Bandas: 0)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2024-12-02T12:18:36.493Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "12",
+        "object_repr": "Asier",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2024-12-02T12:20:36.955Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "15",
+        "object_repr": "Prueba (Bandas: 1)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2024-12-02T16:14:02.818Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "13",
+        "object_repr": "Nueva",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add estilo",
+        "content_type": 7,
+        "codename": "add_estilo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change estilo",
+        "content_type": 7,
+        "codename": "change_estilo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete estilo",
+        "content_type": 7,
+        "codename": "delete_estilo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view estilo",
+        "content_type": 7,
+        "codename": "view_estilo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add pais",
+        "content_type": 8,
+        "codename": "add_pais"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change pais",
+        "content_type": 8,
+        "codename": "change_pais"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete pais",
+        "content_type": 8,
+        "codename": "delete_pais"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view pais",
+        "content_type": 8,
+        "codename": "view_pais"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add banda",
+        "content_type": 9,
+        "codename": "add_banda"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change banda",
+        "content_type": 9,
+        "codename": "change_banda"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete banda",
+        "content_type": 9,
+        "codename": "delete_banda"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view banda",
+        "content_type": 9,
+        "codename": "view_banda"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$Q6eurLltdUmtj8rXlgVZFe$HKavoDNGqrIoOXm/BLRVr8n5NttzURYlYIYbTwBGrZE=",
+        "last_login": "2024-11-30T09:35:55.891Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-10-28T12:40:26.264Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "appJukeBox",
+        "model": "estilo"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "appJukeBox",
+        "model": "pais"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "appJukeBox",
+        "model": "banda"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "376zgyqz34svtw1vk669o4xur7adquop",
+    "fields": {
+        "session_data": ".eJxVjEsOAiEQBe_C2pDm1wSX7j0DgaaVUQPJfFYT764ks9Dtq3q1i5i2tcZt4TlORZyFEqffLSd6chugPFK7d0m9rfOU5VDkQRd57YVfl8P9C9S01PEGpEDZZCRNzoEHthpZOW8cOMwWyPsQNOJN4TdbMBeP3hQ2FAJY8f4AzxQ3SA:1tBBVm:sdsylH77BIU6WgUIdWbjJWEIrr7qjWK0mFzz298gxK0",
+        "expire_date": "2024-11-27T11:26:14.316Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "789g4za4hhdkew5z66leeqxh7jlbsm3n",
+    "fields": {
+        "session_data": ".eJxVjEsOAiEQBe_C2pDm1wSX7j0DgaaVUQPJfFYT764ks9Dtq3q1i5i2tcZt4TlORZyFEqffLSd6chugPFK7d0m9rfOU5VDkQRd57YVfl8P9C9S01PEGpEDZZCRNzoEHthpZOW8cOMwWyPsQNOJN4TdbMBeP3hQ2FAJY8f4AzxQ3SA:1tBXCp:ieUyCfPpvsVjcwXxV6_IK2m4cGl1QF0YKywkHaQ2kos",
+        "expire_date": "2024-11-28T10:36:07.344Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "brc343ay70395jr1mrkif5yh0hbgkam1",
+    "fields": {
+        "session_data": ".eJxVjEsOAiEQBe_C2pDm1wSX7j0DgaaVUQPJfFYT764ks9Dtq3q1i5i2tcZt4TlORZyFEqffLSd6chugPFK7d0m9rfOU5VDkQRd57YVfl8P9C9S01PEGpEDZZCRNzoEHthpZOW8cOMwWyPsQNOJN4TdbMBeP3hQ2FAJY8f4AzxQ3SA:1t5P3F:Q0qXBuLh2CLkMBfZ3Hu0Q5mfeu5AurBasdwhuLCSPr4",
+        "expire_date": "2024-11-11T12:40:53.296Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "nlgso9fj318wkiw1z3ow96mcjwle2gus",
+    "fields": {
+        "session_data": ".eJxVjEsOAiEQBe_C2pDm1wSX7j0DgaaVUQPJfFYT764ks9Dtq3q1i5i2tcZt4TlORZyFEqffLSd6chugPFK7d0m9rfOU5VDkQRd57YVfl8P9C9S01PEGpEDZZCRNzoEHthpZOW8cOMwWyPsQNOJN4TdbMBeP3hQ2FAJY8f4AzxQ3SA:1tATEd:f6Tbp2UHCkJMp1f-F7fOzRdeeDVn6EIfvlMVF408dVc",
+        "expire_date": "2024-11-25T12:09:35.918Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "vyr6yy93vckjfg0g4ge5kgraztufi151",
+    "fields": {
+        "session_data": ".eJxVjEsOAiEQBe_C2pDm1wSX7j0DgaaVUQPJfFYT764ks9Dtq3q1i5i2tcZt4TlORZyFEqffLSd6chugPFK7d0m9rfOU5VDkQRd57YVfl8P9C9S01PEGpEDZZCRNzoEHthpZOW8cOMwWyPsQNOJN4TdbMBeP3hQ2FAJY8f4AzxQ3SA:1tHJtL:NJa9oH1QvHPmYrmcB28L9zPcQEyJrZD-lRtMB4UaPJk",
+        "expire_date": "2024-12-14T09:35:55.896Z"
+    }
+},
+{
+    "model": "appJukeBox.pais",
+    "pk": 1,
+    "fields": {
+        "pais": "España",
+        "bandera": "https://2.bp.blogspot.com/_PoPHw4r-UhY/TPv8aErcvEI/AAAAAAAAAFo/vJm7mhMpOQ4/s1600/bandera_espa_ola.jpg"
+    }
+},
+{
+    "model": "appJukeBox.pais",
+    "pk": 2,
+    "fields": {
+        "pais": "Estados Unidos de America",
+        "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/255px-Flag_of_the_United_States.svg.png"
+    }
+},
+{
+    "model": "appJukeBox.pais",
+    "pk": 3,
+    "fields": {
+        "pais": "Italia",
+        "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_the_Repubblica_Cisalpina.svg/180px-Flag_of_the_Repubblica_Cisalpina.svg.png"
+    }
+},
+{
+    "model": "appJukeBox.pais",
+    "pk": 4,
+    "fields": {
+        "pais": "Colombia",
+        "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/255px-Flag_of_Colombia.svg.png"
+    }
+},
+{
+    "model": "appJukeBox.pais",
+    "pk": 5,
+    "fields": {
+        "pais": "Puerto Rico",
+        "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Flag_of_Puerto_Rico.svg/255px-Flag_of_Puerto_Rico.svg.png"
+    }
+},
+{
+    "model": "appJukeBox.pais",
+    "pk": 6,
+    "fields": {
+        "pais": "Alemania",
+        "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/255px-Flag_of_Germany.svg.png"
+    }
+},
+{
+    "model": "appJukeBox.pais",
+    "pk": 8,
+    "fields": {
+        "pais": "Suiza",
+        "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/640px-Flag_of_Switzerland.svg.png"
+    }
+},
+{
+    "model": "appJukeBox.pais",
+    "pk": 9,
+    "fields": {
+        "pais": "San marino",
+        "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flag_of_San_Marino.svg/800px-Flag_of_San_Marino.svg.png"
+    }
+},
+{
+    "model": "appJukeBox.pais",
+    "pk": 10,
+    "fields": {
+        "pais": "Dinamarca",
+        "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/1200px-Flag_of_Denmark.svg.png"
+    }
+},
+{
+    "model": "appJukeBox.estilo",
+    "pk": 1,
+    "fields": {
+        "estilo": "Rock",
+        "descripcion": "Tradicionalmente, el rock se centra en la guitarra eléctrica amplificada, que surgió en su forma moderna durante la década de 1950 con la popularidad del rock and roll."
+    }
+},
+{
+    "model": "appJukeBox.estilo",
+    "pk": 2,
+    "fields": {
+        "estilo": "Punk",
+        "descripcion": "Este género se caracteriza en la industria musical por su actitud independiente y contracultural"
+    }
+},
+{
+    "model": "appJukeBox.estilo",
+    "pk": 3,
+    "fields": {
+        "estilo": "Reggaeton",
+        "descripcion": "El reguetón​ ​ es un género musical​ que deriva del reggae en español que es a su vez un subgénero del dancehall e incluye elementos del hip hop latino."
+    }
+},
+{
+    "model": "appJukeBox.estilo",
+    "pk": 4,
+    "fields": {
+        "estilo": "Cumbia",
+        "descripcion": "La cumbia es un género musical y baile folclórico tradicional de la costa Caribe colombiana.​​ Posee elementos de tres vertientes culturales, indígena, africana y europea."
+    }
+},
+{
+    "model": "appJukeBox.estilo",
+    "pk": 5,
+    "fields": {
+        "estilo": "Pop",
+        "descripcion": "El ritmo y las melodías tienden a ser sencillos, con un acompañamiento armónico limitado.19​ Las letras de las canciones pop modernas se centran típicamente en temas de la vida cotidiana entre ellas"
+    }
+},
+{
+    "model": "appJukeBox.estilo",
+    "pk": 6,
+    "fields": {
+        "estilo": "Hip-Hop",
+        "descripcion": "La música hip hop​​ o rap es un género de música popular desarrollado en los Estados Unidos por afroestadounidenses del centro de la ciudad​ en el barrio del Bronx."
+    }
+},
+{
+    "model": "appJukeBox.estilo",
+    "pk": 13,
+    "fields": {
+        "estilo": "Trap",
+        "descripcion": "La música trap usa sintetizadores, cajas rítmicas, sub-graves, hi-hats de subdivisión binaria o ternaria y uso del auto-tune y los modos armónicos menores para darle una estética oscura y triste"
+    }
+},
+{
+    "model": "appJukeBox.banda",
+    "pk": 1,
+    "fields": {
+        "nombre": "Extremoduro",
+        "descripcion": "Un grupo español de rock fundado por Roberto Iniesta en la ciudad extremeña de Plasencia",
+        "fechaIni": "1987-01-01",
+        "fechaFin": "2019-12-01",
+        "foto": "https://i2.wp.com/www.scienceofnoise.net/wp-content/uploads/2019/12/Extremoduro-1.jpg",
+        "pais": 1,
+        "estilos": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "appJukeBox.banda",
+    "pk": 2,
+    "fields": {
+        "nombre": "Måneskin",
+        "descripcion": "Måneskin es una banda italiana formada en 2016 en Roma, conformada por Damiano David como vocalista, Victoria De Angelis como bajista, Thomas Raggi como guitarrista y Ethan Torchio como baterista.",
+        "fechaIni": "2016-01-01",
+        "fechaFin": null,
+        "foto": "https://media.vogue.es/photos/60aa1165e42ef3b89417ba4b/4:3/w_3711,h_2783,c_limit/GettyImages-1233047832.jpg",
+        "pais": 3,
+        "estilos": [
+            1,
+            5
+        ]
+    }
+},
+{
+    "model": "appJukeBox.banda",
+    "pk": 3,
+    "fields": {
+        "nombre": "50 Cent",
+        "descripcion": "Curtis James Jackson, más conocido por su nombre artístico 50 Cent, es un rapero, compositor y actor estadounidense. Alcanzó la fama mundial con el lanzamiento de sus álbumes Get Rich or Die Tryin'",
+        "fechaIni": "1996-01-01",
+        "fechaFin": null,
+        "foto": "https://linkstorage.linkfire.com/medialinks/images/62e9e055-8335-4b24-8b4b-f037af703e0c/artwork-440x440.jpg",
+        "pais": 2,
+        "estilos": [
+            6
+        ]
+    }
+},
+{
+    "model": "appJukeBox.banda",
+    "pk": 4,
+    "fields": {
+        "nombre": "Lucho Bermúdez",
+        "descripcion": "Fue un músico, compositor, arreglista, director e intérprete colombiano, es considerado uno de los más importantes intérpretes y compositores de música popular colombiana del siglo XX.",
+        "fechaIni": "1939-11-11",
+        "fechaFin": "1994-04-23",
+        "foto": "https://www.naiz.eus/media/asset_publics/resources/000/907/760/article_main_landscape/1221_musika.jpg",
+        "pais": 4,
+        "estilos": [
+            4
+        ]
+    }
+},
+{
+    "model": "appJukeBox.banda",
+    "pk": 5,
+    "fields": {
+        "nombre": "Bad Bunny",
+        "descripcion": "Benito Antonio Martínez Ocasio ​conocido artísticamente como Bad Bunny, es un cantante, compositor, productor discográfico y luchador puertorriqueño.​Caracterizado por su entonación grave.",
+        "fechaIni": "2013-05-23",
+        "fechaFin": null,
+        "foto": "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2023/03/09/bad-bunny.jpeg",
+        "pais": 5,
+        "estilos": [
+            3,
+            6,
+            13
+        ]
+    }
+},
+{
+    "model": "appJukeBox.banda",
+    "pk": 6,
+    "fields": {
+        "nombre": "Fito y los Fitipaldis",
+        "descripcion": "Fito & Fitipaldis es un grupo musical español de rock and roll creado en 1997, por Fito Cabrales, de Platero y Tú.​ Surgió como un proyecto paralelo de Fito.",
+        "fechaIni": "1997-12-12",
+        "fechaFin": null,
+        "foto": "https://estaticos-cdn.prensaiberica.es/clip/39aee658-a074-45b8-a259-ea578410ff64_16-9-discover-aspect-ratio_default_0.jpg",
+        "pais": 1,
+        "estilos": [
+            1,
+            5
+        ]
+    }
+},
+{
+    "model": "appJukeBox.banda",
+    "pk": 9,
+    "fields": {
+        "nombre": "La Raíz",
+        "descripcion": "Grupo de música​​ de Gandía, que recorre los escenarios mezclando el rock con el reggae, el jazz y el hip hop. Esta banda está conformada por once músicos de varias procedencias",
+        "fechaIni": "2006-07-06",
+        "fechaFin": null,
+        "foto": "https://lasttour.org/wp-content/uploads/2024/09/LaRaiz_Cabecera.jpg",
+        "pais": 1,
+        "estilos": [
+            1,
+            6
+        ]
+    }
+},
+{
+    "model": "appJukeBox.banda",
+    "pk": 10,
+    "fields": {
+        "nombre": "Karol G",
+        "descripcion": "Carolina Giraldo Navarro, conocida artísticamente como Karol G, es una cantante, compositora y empresaria colombiana. Su carrera se ha destacado por emplear los estilos de reguetón y pop urbano.",
+        "fechaIni": "2007-12-30",
+        "fechaFin": null,
+        "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/2023-11-16_Gala_de_los_Latin_Grammy%2C_15.jpg/330px-2023-11-16_Gala_de_los_Latin_Grammy%2C_15.jpg",
+        "pais": 4,
+        "estilos": [
+            3,
+            13
+        ]
+    }
+},
+{
+    "model": "appJukeBox.banda",
+    "pk": 11,
+    "fields": {
+        "nombre": "Bushido",
+        "descripcion": "Nacido Anis Mohamed Youssef Ferchichi y también conocido por el sobrenombre Sonny Black, es un cantante de rap alemán-tunecino",
+        "fechaIni": "1998-04-21",
+        "fechaFin": "2022-10-19",
+        "foto": "https://www.shutterstock.com/editorial/image-editorial/M1T4A017NcDdU222NjIxMTg=/german-rapper-bushido-federal-administrative-court-leipzig-550nw-10460830i.jpg",
+        "pais": 6,
+        "estilos": [
+            6
+        ]
+    }
+},
+{
+    "model": "appJukeBox.banda",
+    "pk": 13,
+    "fields": {
+        "nombre": "Nueva",
+        "descripcion": "esta banda es nueva",
+        "fechaIni": "2024-11-28",
+        "fechaFin": "2025-01-02",
+        "foto": "https://lasttour.org/wp-content/uploads/2024/09/LaRaiz_Cabecera.jpg",
+        "pais": 1,
+        "estilos": [
+            3
+        ]
+    }
+}
+]
