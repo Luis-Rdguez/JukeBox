@@ -138,8 +138,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # # Cosas para que render funcione
-# MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 ALLOWED_HOSTS = ['*']
 # import dj_database_url
