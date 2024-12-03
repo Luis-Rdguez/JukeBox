@@ -131,7 +131,7 @@ def show_paises(request):
     for pais in paises:
         numero_bandas = pais.numero_bandas()  # Usa el método 'numero_bandas' del modelo
         # Calcula el porcentaje de bandas en el país con respecto al total
-        porcentaje = (numero_bandas / total_bandas * 100) if total_bandas > 0 else 0
+        porcentaje = int((numero_bandas / total_bandas * 100)) if total_bandas > 0 else 0
         paises_info.append({
             'pais': pais,
             'numero_bandas': numero_bandas,

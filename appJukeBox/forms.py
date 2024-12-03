@@ -12,7 +12,6 @@ class BandaForm(forms.ModelForm):
             'fechaFin': forms.DateInput(attrs={'type': 'date'}),
             'estilos': forms.SelectMultiple(attrs={
                 'class': 'form-control',  # Clase para estilizarlo con Bootstrap o CSS
-                'placeholder': 'Selecciona estilos'
             }),
             'foto': forms.URLInput(attrs={
                 'class': 'form-control',  # Clase para estilizar el campo URL
