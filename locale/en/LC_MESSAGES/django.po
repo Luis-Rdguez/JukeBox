@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-01 11:56+0100\n"
+"POT-Creation-Date: 2024-12-03 12:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,67 +26,50 @@ msgstr "Add Band"
 msgid "AGREGAR BANDA"
 msgstr "ADD BAND"
 
-#: .\appJukeBox\templates\addBanda.html:28
+#: .\appJukeBox\templates\addBanda.html:27
 msgid "Formulario para Agregar Banda"
 msgstr "Form to Add Band"
 
-#: .\appJukeBox\templates\addBanda.html:35
+#: .\appJukeBox\templates\addBanda.html:34
 msgid "Nombre de la Banda"
 msgstr "Band Name"
 
-#: .\appJukeBox\templates\addBanda.html:41
+#: .\appJukeBox\templates\addBanda.html:40
 #: .\appJukeBox\templates\estilo.html:15
 msgid "Descripción"
 msgstr "Description"
 
-#: .\appJukeBox\templates\addBanda.html:47
+#: .\appJukeBox\templates\addBanda.html:46
 msgid "País de Origen"
 msgstr "Country of Origin"
 
-#: .\appJukeBox\templates\addBanda.html:53
+#: .\appJukeBox\templates\addBanda.html:52
 msgid "Fecha de Inicio"
 msgstr "Start Date"
 
-#: .\appJukeBox\templates\addBanda.html:59
+#: .\appJukeBox\templates\addBanda.html:58
 msgid "Fecha de Finalización"
 msgstr "End Date"
 
-#: .\appJukeBox\templates\addBanda.html:65
+#: .\appJukeBox\templates\addBanda.html:64
 msgid "Foto de la Banda"
 msgstr "Band Photo"
 
-#: .\appJukeBox\templates\addBanda.html:71
+#: .\appJukeBox\templates\addBanda.html:70
 msgid "Estilos Musicales"
 msgstr "Music Styles"
 
-#: .\appJukeBox\templates\addBanda.html:77
+#: .\appJukeBox\templates\addBanda.html:76
 msgid "Guardar Banda"
 msgstr "Save Band"
 
 #: .\appJukeBox\templates\addEstilo.html:4
-#: .\appJukeBox\templates\addEstilo.html:26
 msgid "Agregar Estilo"
 msgstr "Add Style"
 
 #: .\appJukeBox\templates\addEstilo.html:13
 msgid "AGREGAR ESTILO"
 msgstr "ADD STYLE"
-
-#: .\appJukeBox\templates\addEstilo.html:32
-msgid "Nombre del Estilo"
-msgstr "Style Name"
-
-#: .\appJukeBox\templates\addEstilo.html:38
-msgid "Descripción del Estilo"
-msgstr "Style Description"
-
-#: .\appJukeBox\templates\addEstilo.html:43
-msgid "Bandas Relacionadas"
-msgstr "Related Bands"
-
-#: .\appJukeBox\templates\addEstilo.html:49
-msgid "Guardar Estilo"
-msgstr "Save Style"
 
 #: .\appJukeBox\templates\addPais.html:5
 msgid "Agregar Pais"
@@ -96,11 +79,11 @@ msgstr "Add Country"
 msgid "AGREGAR PAIS"
 msgstr "ADD COUNTRY"
 
-#: .\appJukeBox\templates\addPais.html:28
+#: .\appJukeBox\templates\addPais.html:29
 msgid "Formulario para Agregar País"
 msgstr "Form to Add Country"
 
-#: .\appJukeBox\templates\addPais.html:34
+#: .\appJukeBox\templates\addPais.html:35
 msgid "Nombre del País"
 msgstr "Country Name"
 
@@ -144,7 +127,7 @@ msgstr "Styles"
 msgid "Bandas"
 msgstr "Bands"
 
-#: .\appJukeBox\templates\bandas.html:47 .\appJukeBox\templates\estilo.html:55
+#: .\appJukeBox\templates\bandas.html:47 .\appJukeBox\templates\estilo.html:54
 #: .\appJukeBox\templates\estilos.html:43 .\appJukeBox\templates\index.html:58
 #: .\appJukeBox\templates\pais.html:61
 msgid "Más Información"
@@ -170,35 +153,55 @@ msgstr "Home"
 msgid "Paises"
 msgstr "Countries"
 
-#: .\appJukeBox\templates\base.html:77
+#: .\appJukeBox\templates\base.html:47
+msgid "Manejar datos"
+msgstr "Manage data"
+
+#: .\appJukeBox\templates\base.html:78
 msgid "Servicios"
 msgstr "Services"
 
-#: .\appJukeBox\templates\base.html:80
+#: .\appJukeBox\templates\base.html:81
 msgid "Introduzca su email"
 msgstr "Introduce your email"
 
-#: .\appJukeBox\templates\base.html:81
+#: .\appJukeBox\templates\base.html:82
 msgid "Suscríbete"
 msgstr "Subscribe"
 
-#: .\appJukeBox\templates\base.html:84
+#: .\appJukeBox\templates\base.html:85
 msgid "Para cualquier problema contáctenos empleando su email."
 msgstr "For any issues, contact us using your email."
 
-#: .\appJukeBox\templates\base.html:89
+#: .\appJukeBox\templates\base.html:90
 msgid "Contáctanos"
 msgstr "Contact Us"
 
-#: .\appJukeBox\templates\estilo.html:29
+#: .\appJukeBox\templates\datos.html:5
+msgid "Cargar y guardar datos"
+msgstr "Load and save data"
+
+#: .\appJukeBox\templates\datos.html:14
+msgid "CARGAR Y GUARDAR DATOS"
+msgstr "LOAD AND SAVE DATA"
+
+#: .\appJukeBox\templates\datos.html:31
+msgid "Cargar Datos"
+msgstr "Load Data"
+
+#: .\appJukeBox\templates\datos.html:41
+msgid "Guardar Datos"
+msgstr "Save Country"
+
+#: .\appJukeBox\templates\estilo.html:28
 msgid "Hay"
 msgstr "There are"
 
-#: .\appJukeBox\templates\estilo.html:29
+#: .\appJukeBox\templates\estilo.html:28
 msgid "banda(s) de"
 msgstr "band(s) from"
 
-#: .\appJukeBox\templates\estilo.html:70
+#: .\appJukeBox\templates\estilo.html:69
 msgid "No hay bandas creadas para este estilo."
 msgstr "No bands created for this style."
 
@@ -267,13 +270,25 @@ msgstr "Can't find your country?"
 msgid "Añadir pais"
 msgstr "Add Country"
 
-#: .\appJukeBox\views.py:17
+#: .\appJukeBox\views.py:20
 msgid "Página de inicio"
 msgstr "Home Page"
 
-#: .\appJukeBox\views.py:50
+#: .\appJukeBox\views.py:53
 msgid "No hay bandas creadas para este país."
 msgstr "No bands created for this style."
+
+#~ msgid "Nombre del Estilo"
+#~ msgstr "Style Name"
+
+#~ msgid "Descripción del Estilo"
+#~ msgstr "Style Description"
+
+#~ msgid "Bandas Relacionadas"
+#~ msgstr "Related Bands"
+
+#~ msgid "Guardar Estilo"
+#~ msgstr "Save Style"
 
 #~ msgid "Copyright"
 #~ msgstr "Copyright"
