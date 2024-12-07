@@ -16,4 +16,5 @@ urlpatterns = [
     path('datos/', views.cargar_guardar_datos, name='datos'),
 
 
+    path('switch/<str:lang_code>/', views.switch_language, name='switch_language'),
 ]

@@ -43,8 +43,11 @@
                                             <li><a class="active" href="{% url 'index' %}">{% trans "Inicio" %}</a></li>
                                             <li><a href="{% url 'todas_bandas' %}">{% trans "Bandas" %}</a></li>
                                             <li><a href="{% url 'todos_estilos' %}">{% trans "Estilos" %}</a></li>
-                                            <li><a href="{% url 'todos_paises' %}">{% trans "Paises" %}</a></li>
-                                            <li><a href="{% url 'datos' %}">{% trans "Manejar datos" %}</a></li>
+                                            <li><a href="{% url 'todos_paises' %}">{% trans "Paises" %}</a></li><li><a href="{% url 'datos' %}">{% trans "Manejar datos" %}</a></li>
+                                            <li><p>|</p></li>
+                                            <!-- Language Switcher -->
+                                            <li><a href="{% url 'switch_language' 'es' %}" class="lang-button">Español</a></li>
+                                            <li><a href="{% url 'switch_language' 'en' %}" class="lang-button">English</a></li>
                                         </ul>
                                     </nav>
                                 </div>

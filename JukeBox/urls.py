@@ -27,5 +27,5 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path('', include('appJukeBox.urls')),  # Tu app principal
     path('admin/', admin.site.urls),       # Panel de administración
-    prefix_default_language=False,         # Opcional: sin prefijo para el idioma por defecto
+    prefix_default_language=True,         # Opcional: sin prefijo para el idioma por defecto
 )
