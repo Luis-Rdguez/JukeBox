@@ -14,4 +14,5 @@ urlpatterns = [
     path('addEstilo/', views.add_estilo, name='addEstilo'),  # URL para agregar un nuevo estilo
     path('addPais/', views.add_pais, name='addPais'),  # URL para agregar un nuevo pais
 
+    path('switch/<str:lang_code>/', views.switch_language, name='switch_language'),
 ]

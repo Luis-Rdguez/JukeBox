@@ -3,6 +3,8 @@ from django.urls import reverse  # Para generar URLs dinámicamente
 from .models import *
 from .forms import *
 from django.utils.translation import gettext as _
+from django.utils.translation import get_language, activate
+from urllib.parse import urlparse
 
 # Página de inicio: Muestra una banda destacada por país
 def index(request):
@@ -194,3 +196,28 @@ def add_estilo(request):
         form = EstiloForm()
 
     return render(request, 'addEstilo.html', {'form': form})
+
+def switch_language(request, lang_code):
+    """
+    Cambia el idioma del sitio y redirige a la URL adecuada.
+    """
+    # Obtener la referencia anterior o usar la raíz como predeterminada
+    referer = request.META.get('HTTP_REFERER', '/')
+    parsed_url = urlparse(referer)
+    path = parsed_url.path  # Extrae solo el path (sin dominio)
+
+    current_lang = get_language()
+
+    # Remover el prefijo actual del idioma
+    if path.startswith(f"/{current_lang}/"):
+        path = path[len(f"/{current_lang}/"):]
+    elif path.startswith(f"/{current_lang}"):
+        path = path[len(f"/{current_lang}"):]
+
+    # Garantizar que la ruta tenga el formato adecuado
+    if not path.startswith('/'):
+        path = '/' + path
+
+    # Activar el nuevo idioma y redirigir
+    activate(lang_code)
+    return redirect(f"/{lang_code}{path}")
